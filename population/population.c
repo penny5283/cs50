@@ -12,11 +12,11 @@ int main(void)
 
     // TODO: Prompt for start size
 
-            int n2;
-            do {
-                n2 = get_int("End size: ");
-            }
-            while (n2 < n);
+    int n2;
+    do {
+        n2 = get_int("End size: ");
+    }
+    while (n2 < n);
 
     // TODO: Prompt for end size
     int y = 0;
