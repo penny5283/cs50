@@ -26,6 +26,6 @@ int main(void)
         y++;
     }
     // TODO: Calculate number of years until we reach threshold
-    printf("The number is %i\n", y);
+    printf("Years: %i\n", y);
     // TODO: Print number of years
 }
