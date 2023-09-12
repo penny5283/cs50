@@ -3,13 +3,13 @@
 
 int main(void)
 {
-    int n;
+    int n1;
     do
     {
-        n = get_int("Start size: ");
+        n1 = get_int("Start size: ");
     }
-    while (n > 9);
-    return n;
+    while (n1 > 9);
+    return n1;
     }
     // TODO: Prompt for start size
 
@@ -19,9 +19,9 @@ int main(void)
             }
             while (n2 > n);
             return n2;
-    
+
     // TODO: Prompt for end size
-    int y = 0
+    int y = 0;
     for (int n = 0; n2 <= n; y++)
     {
         n = n1 + (n1/3) - (n1/4)
