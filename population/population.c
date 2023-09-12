@@ -13,14 +13,13 @@ int main(void)
     }
     // TODO: Prompt for start size
 
-        {
             int n2;
             do {
                 n2 = get_int("Start size");
             }
             while (n2 > n);
             return n2;
-        }
+    
     // TODO: Prompt for end size
     int y = 0
     for (int n = 0; n2 <= n; y++)
