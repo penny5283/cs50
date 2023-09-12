@@ -29,6 +29,6 @@ int main(void)
         n = n1 + (n1/3) - (n1/4)
     }
     // TODO: Calculate number of years until we reach threshold
-
+    printf("The number is %i\n", y)
     // TODO: Print number of years
 }
