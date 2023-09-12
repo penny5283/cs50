@@ -8,8 +8,8 @@ int main(void)
     {
         n = get_int("Start size: ");
     }
-    while (n > 9);
-    }
+    while (n < 9);
+
     // TODO: Prompt for start size
 
             int n2;
