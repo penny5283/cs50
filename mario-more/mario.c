@@ -8,7 +8,12 @@ int main(void)
     while( n < 1) or (n > 8);
     for (int i = n; i <= 8; i++)
         {
-            for (int j = 8 - n; j)
+            for (int j = n; j)
+            {
+                printf(" " * (8-n))
+                printf("#")
+                printf("  ")
+            }
         }
 }
       ##
