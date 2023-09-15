@@ -3,8 +3,8 @@
 
 int main(void)
 {
-    for (int i = 1; i <= 8; i++)
+    for (int i = n; i <= 8; i++)
         {
-            for (int j = )
+            for (int j = n)
         }
 }
