@@ -13,7 +13,8 @@ int main(void)
                 printf(" " * (8-n))
                 printf("#")
                 printf("  ")
+                printf("#")
             }
+            print("\n")
         }
 }
-      ##
