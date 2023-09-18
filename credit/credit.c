@@ -9,5 +9,6 @@ int main(void)
     int res = 0
     do
     res += 2*(n % 100);
+    n[-1,]
     while (n > 0)
 }
