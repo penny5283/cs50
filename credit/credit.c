@@ -12,7 +12,7 @@ int main(void)
     int count = 1;
     do
     {
-    res 
+    res += n % 10
     }
     while (n > 0);
 }
