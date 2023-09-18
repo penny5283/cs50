@@ -16,9 +16,12 @@ int main(void)
     digit = n % 10;
     count += 1;
     if count % 2 = 0
+    {
     res += digit * 2
+    }
     else
-    res += digit
+    {
+        res += digit
     }
     while (n > 0);
     if res % 10 =0
