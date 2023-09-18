@@ -11,10 +11,7 @@ int main(void)
         {
             for (int j = 0; j<)
             {
-                printf(" " * (8-n))
-                printf("#")
-                printf("  ")
-                printf("#")
+                printf(" " * (8-n)+ n*"#"+2*" "+n*"#")
             }
             print("\n")
         }
