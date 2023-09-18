@@ -7,8 +7,12 @@ int main(void)
     {
     int n = get_int("");
     }
-    while (n > 0)
+    while (n > 0);
     int res = 0;
     int count = 1;
-
+    do
+    {
+    res 
+    }
+    while (n > 0);
 }
