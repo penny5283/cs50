@@ -12,8 +12,10 @@ int main(void)
     int count = 1;
     do
     {
-    res += n % 10;
+    res = n % 10;
     count += 1;
+    if count % 2 = 0
+    res += res * 2
     }
     while (n > 0);
 }
