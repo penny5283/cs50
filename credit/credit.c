@@ -5,5 +5,6 @@ int main(void)
 {
     do
     n = get_int("");
-    while ()
+    while (n > 0)
+    
 }
