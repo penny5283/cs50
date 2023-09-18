@@ -15,7 +15,12 @@ int main(void)
             }
             for (int k = 1; k <= n; k++)
             {
-                printf("#11#");
+                printf("#");
+            }
+            printf("11");
+            for (int l = 1; l <= n; l++)
+            {
+                printf("#");
             }
             printf("\n");
         }
