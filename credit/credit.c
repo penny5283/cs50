@@ -23,7 +23,7 @@ int main(void)
         }
         else
         {
-            
+            res += digit;
         }
         }
     }
