@@ -4,7 +4,10 @@
 int main(void)
 {
     do
-    n = get_int("");
+    int n = get_int("");
     while (n > 0)
-    
+    int res = 0
+    do
+    res += n % 100;
+    while (n > 0)
 }
