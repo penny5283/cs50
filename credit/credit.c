@@ -21,4 +21,8 @@ int main(void)
     res += digit
     }
     while (n > 0);
+    if res % 10 =0
+    printf("1")
+    else
+    printf("2")
 }
