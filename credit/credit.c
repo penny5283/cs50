@@ -8,6 +8,6 @@ int main(void)
     while (n > 0)
     int res = 0
     do
-    res += n % 100;
+    res += 2*(n % 100);
     while (n > 0)
 }
