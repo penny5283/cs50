@@ -9,13 +9,16 @@ int main(void)
     }
     while (n > 0);
     int res = 0;
+    int digit = 0;
     int count = 1;
     do
     {
-    res = n % 10;
+    digit = n % 10;
     count += 1;
     if count % 2 = 0
-    res += res * 2
+    res += digit * 2
+    else
+    res += digit
     }
     while (n > 0);
 }
