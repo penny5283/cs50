@@ -28,7 +28,8 @@ int main(void)
         }
     if (res % 10 == 0)
     {
-        prin
+        if (count == 15) & (n[0]==3)
+        printf("AMEX")
     }
     else
     {
