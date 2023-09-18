@@ -13,7 +13,10 @@ int main(void)
             {
                 printf("1");
             }
-            for (int k = 1; k)
-            print("\n");
+            for (int k = 1; k <= n; k++)
+            {
+                printf("#11#");
+            }
+            printf("\n");
         }
 }
