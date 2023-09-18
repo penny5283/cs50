@@ -6,9 +6,7 @@ int main(void)
     do
     int n = get_int("");
     while (n > 0)
-    int res = 0
-    do
-    res += 2*(n % 100);
-    n[-1,]
-    while (n > 0)
+    int res = 0;
+    int count = 1;
+
 }
