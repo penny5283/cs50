@@ -11,7 +11,7 @@ int main(void)
         {
             for (int j = 1; j<= n; j++ )
             {
-                printf(" " * (8-n)+ n*"#"+2*" "+n*"#");
+                printf("1");
             }
             print("\n");
         }
