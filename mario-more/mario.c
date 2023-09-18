@@ -11,13 +11,13 @@ int main(void)
         {
             for (int j = 1; j<= n-i; j++ )
             {
-                printf("1");
+                printf(" ");
             }
             for (int a = 1; a <= i; a++)
             {
                 printf("#");
             }
-            printf("11");
+            printf("  ");
             for (int b = 1; b <= i; b++)
             {
                 printf("#");
