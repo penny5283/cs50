@@ -26,4 +26,8 @@ int main(void)
             res += digit;
         }
         }
+    if (res % 10 == 0)
+    {
+        prin
+    }
     }
