@@ -30,4 +30,8 @@ int main(void)
     {
         prin
     }
+    else
+    {
+        printf("INVALID")
+    }
     }
