@@ -12,21 +12,18 @@ int main(void)
     int res = 0;
     int digit = 0;
     int count = 1;
-    do
+    while (n > 0)
     {
-    digit = n % 10;
-    count += 1;
-    if count % 2 = 0
-    {
-    res += digit * 2
+        digit = n % 10;
+        n = n / 10;
+        count++;
+        if (count % 2 ==0)
+        {
+            res += digit * 2;
+        }
+        else
+        {
+            
+        }
+        }
     }
-    else
-    {
-        res += digit
-    }
-    while (n > 0);
-    if res % 10 =0
-    printf("1")
-    else
-    printf("2")
-}
