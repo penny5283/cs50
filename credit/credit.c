@@ -30,6 +30,7 @@ int main(void)
     {
         if (count == 15) & (n[0]==3)
         printf("AMEX")
+        if ()
     }
     else
     {
