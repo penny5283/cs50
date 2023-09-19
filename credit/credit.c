@@ -33,12 +33,14 @@ int main(void)
         }
         sum += digit;
     }
+    
     //get the first digit from original card number
     while(original_card_number >= 10)
     {
         original_card_number /= 10;
     }
-        first_digit = original_card_number;
+    first_digit = original_card_number;
+
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
     {
