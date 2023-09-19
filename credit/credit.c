@@ -30,8 +30,9 @@ int main(void)
             {
                 digit -= 9;
             }
+        sum += digit;
     }
-    sum += digit;
+
 
 // check if the card number is valid and determine its type
 if(sum % 10 == 0)
