@@ -15,7 +15,7 @@ int main(void)
     int digit_count = 0;
     int first_digit = 0; // Initialize first_digit
     int digit;
-
+    long long original_card_number = card_number;
     // Calculate the sum of the credit card digits
     while (card_number > 0)
     {
@@ -32,7 +32,11 @@ int main(void)
         }
         sum += digit;
     }
-        first_digit = card_number;
+    //get the first digit from original card number
+    while(original_card_number > 0)
+    {
+        
+    }
 
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
