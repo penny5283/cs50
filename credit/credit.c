@@ -9,24 +9,20 @@ int main(void)
     {
     card_number = get_long_long("Credit card number: ");
     }
-    while (n <= 0);
+    while (card_number <= 0);
 
-    int res = 0;
-    int digit = 0;
-    int count = 1;
-    int first_digit = 0;
+    int sum = 0;
+    int digit_count = 1;
 
-    first_digit = n
-
-    while (n > 0)
+    while (card_number > 0)
     {
-        digit = n % 10;
-        n = n / 10;
-        count++;
+        int digit = card_number % 10;
+        card_number /= 10;
+        digit_count++;
 
-        if (count % 2 == 0)
+        if (digit_count % 2 == 0)
         {
-            res += digit * 2;
+            digit *= 2;
         }
         else
         {
