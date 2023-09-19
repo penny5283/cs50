@@ -51,7 +51,7 @@ int main(void)
         }
         else if ((digit_count == 13 || digit_count == 16) && (first_digit == 4))
         {
-            printf("VISA\n"); // Changed "CREDIT" to "VISA"
+            printf("VISA\n"); 
         }
         else
         {
