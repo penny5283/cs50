@@ -50,6 +50,10 @@ int main(void)
         {
             printf("VISA\n"); // Changed "CREDIT" to "VISA"
         }
+        else
+        {
+            printf("INVALID\n"); // Added missing '\n' and semicolon
+        }
     }
     else
     {
