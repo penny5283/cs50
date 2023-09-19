@@ -22,8 +22,6 @@ int main(void)
         digit_count++;
         int frist_digit = card_number;
 
-            num /= 10;
-        }
         if (digit_count % 2 == 0)
         {
             digit *= 2;
