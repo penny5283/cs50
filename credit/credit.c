@@ -3,12 +3,13 @@
 
 int main(void)
 {
-    int n;
+    long n;
     do
     {
-    n = get_int("Credit card number: \n");
+    n = get_long("Credit card number: ");
     }
     while (n <= 0);
+
     int res = 0;
     int digit = 0;
     int count = 1;
