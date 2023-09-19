@@ -17,7 +17,6 @@ int main(void)
     int digit;
     long long original_card_number = card_number;
 
-
     // Calculate the sum of the credit card digits
     while (card_number > 0)
     {
@@ -27,11 +26,11 @@ int main(void)
         if (digit_count % 2 == 0)
         {
             digit *= 2;
-            if (digit >= 10)
-            digit -= 9;
+            if (digit >= 10) {
+                digit -= 9;
+            }
         }
-        // printf("%d", digit);
-        // printf("\n");
+
         sum += digit;
     }
 
@@ -41,8 +40,7 @@ int main(void)
         original_card_number /= 10;
     }
     first_two_digits = original_card_number;
-    printf("%d", sum);
-    printf("%d", digit_count);
+
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
     {
@@ -70,4 +68,3 @@ int main(void)
 
     return 0;
 }
-
