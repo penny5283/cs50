@@ -13,7 +13,7 @@ int main(void)
 
     int sum = 0;
     int digit_count = 0;
-    int first_digit = 0; // Initialize first_digit
+    int first_two_digits = 0; // Initialize first_digit
     int digit;
     long long original_card_number = card_number;
 
@@ -34,23 +34,21 @@ int main(void)
         sum += digit;
     }
 
-    //get the first digit from original card number
-    while(original_card_number >= 10)
+    //get the first two digits from original card number
+    while(original_card_number >= 100)
     {
         original_card_number /= 10;
     }
-    first_digit = original_card_number;
+    first_two_digits = original_card_number;
 
-    //get the second digit
-    
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
     {
-        if ((digit_count == 15) && ((first_digit == 3) || (card_number == 37)))
+        if ((digit_count == 15) && ((first_two_digits == 34) || (first_two_digits == 37)))
         {
             printf("AMEX\n");
         }
-        else if ((digit_count == 16) && (card_number >= 51 && card_number <= 55))
+        else if ((digit_count == 16) && (first_two_digits >= 51 && first_two_digits <= 55))
         {
             printf("MASTERCARD\n");
         }
