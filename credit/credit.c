@@ -32,7 +32,10 @@ int main(void)
         printf("AMEX");
         if (count == 16 && n[0]==5)
         printf("MASTERCARD");
-        if ()
+        if (count == 13 || count == 16)
+            if n[0]==4
+            printf("VISA");
+
     }
     else
     {
