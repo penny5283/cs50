@@ -26,6 +26,8 @@ int main(void)
         if (digit_count % 2 == 0)
         {
             digit *= 2;
+            if (digit >= 10)
+            
         }
         printf("%d", digit);
         printf("\n");
