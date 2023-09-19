@@ -13,6 +13,10 @@ int main(void)
     int res = 0;
     int digit = 0;
     int count = 1;
+    int first_digit = 0;
+
+    first_digit = n
+
     while (n > 0)
     {
         digit = n % 10;
