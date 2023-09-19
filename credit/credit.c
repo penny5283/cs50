@@ -52,7 +52,7 @@ int main(void)
         {
             printf("MASTERCARD\n");
         }
-        else if ((digit_count == 13 || digit_count == 16) && (first_digit == 4))
+        else if ((digit_count == 13 || digit_count == 16) && (first_two_digits/10 == 4))
         {
             printf("VISA\n");
         }
