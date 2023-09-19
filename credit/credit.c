@@ -16,8 +16,7 @@ int main(void)
     int first_two_digits = 0; // Initialize first_digit
     int digit;
     long long original_card_number = card_number;
-    int first_digit = 0;
-    int second_digit = 0;
+
 
     // Calculate the sum of the credit card digits
     while (card_number > 0)
@@ -29,13 +28,11 @@ int main(void)
         {
             digit *= 2;
             if (digit >= 10)
-            digit = digit / 10;
-            second_digit = digit % 10;
+            digit -= 9;
         }
-        printf("%d", digit);
-        printf("\n");
+        // printf("%d", digit);
+        // printf("\n");
         sum += digit;
-        sum += second_digit;
     }
 
     //get the first two digits from original card number
