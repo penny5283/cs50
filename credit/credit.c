@@ -41,6 +41,7 @@ int main(void)
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
     {
+        card_number = card_number * 10 + digit;//restore
         if ((digit_count == 15) && ((card_number == 34) || (card_number == 37)))
         {
             printf("AMEX\n");
@@ -51,7 +52,7 @@ int main(void)
         }
         else if ((digit_count == 13 || digit_count == 16) && (first_digit == 4))
         {
-            printf("VISA\n"); 
+            printf("VISA\n");
         }
         else
         {
