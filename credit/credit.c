@@ -14,14 +14,13 @@ int main(void)
     int sum = 0;
     int digit_count = 0;
     int res = 0;
-    int firstdigit;
 
     while (card_number > 0)
     {
         int digit = card_number % 10;
         card_number /= 10;
         digit_count++;
-
+        int frist_digit = card_number;
         {
             num /= 10;
         }
@@ -45,5 +44,8 @@ if(sum % 10 == 0)
     }
     else if(digit_count == 16 && (card_number >= 51 && card_number <= 55))
         printf("MASTERCARD\n");
-    else if((digit_count == 13 || digit_count ==16)) && (card_number / 10 ==4)
+    else if((digit_count == 13 || digit_count ==16)) && (first_digit == 4)
+        printf("CREDIT\n")
+    else
+        printf("INVALID")
 }
