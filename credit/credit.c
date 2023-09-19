@@ -3,10 +3,11 @@
 
 int main(void)
 {
-    long n;
+    // prompte user for a credit number
+    long long card_number;
     do
     {
-    n = get_long("Credit card number: ");
+    card_number = get_long_long("Credit card number: ");
     }
     while (n <= 0);
 
