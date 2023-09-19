@@ -12,7 +12,7 @@ int main(void)
     while (card_number <= 0);
 
     int sum = 0;
-    int digit_count = 1;
+    int digit_count = 0;
 
     while (card_number > 0)
     {
@@ -30,4 +30,14 @@ int main(void)
             }
     }
     sum += digit;
+}
+// check if the card number is valid and determine its type
+if(sum % 10 == 0)
+{
+    if(digit_count == 15 && (card_number ==34 || card_number == 37))
+    {
+        prinf("AMEX\n");
+    }
+    else if(digit_count == 16 && (card_number >= 51 && card_number <= 55))
+
 }
