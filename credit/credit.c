@@ -33,7 +33,7 @@ int main(void)
         }
         sum += digit;
     }
-    
+
     //get the first digit from original card number
     while(original_card_number >= 10)
     {
@@ -44,7 +44,7 @@ int main(void)
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
     {
-        if ((digit_count == 15) && ((card_number == 34) || (card_number == 37)))
+        if ((digit_count == 15) && ((first_digit == 3) || (card_number == 37)))
         {
             printf("AMEX\n");
         }
