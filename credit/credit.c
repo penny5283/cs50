@@ -24,24 +24,10 @@ int main(void)
         {
             digit *= 2;
         }
-        else
-        {
-            res += digit;
-        }
-        }
-    if (res % 10 == 0)
-    {
-        if (count == 15 && n[0]==3)
-        printf("AMEX");
-        if (count == 16 && n[0]==5)
-        printf("MASTERCARD");
-        if (count == 13 || count == 16)
-            if n[0]==4
-            printf("VISA");
-
+            if (digit > 9)
+            {
+                digit -= 9;
+            }
     }
-    else
-    {
-        printf("INVALID")
-    }
-    }
+    sum += digit;
+}
