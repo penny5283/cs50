@@ -28,7 +28,7 @@ int main(void)
             digit *= 2;
             if (digit > 9)
             {
-                digit = 0;
+                digit -= 10;
             }
         }
         sum += digit;
