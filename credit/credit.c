@@ -14,6 +14,7 @@ int main(void)
     int sum = 0;
     int digit_count = 0;
     int res = 0;
+    int digit;
 
     while (card_number > 0)
     {
