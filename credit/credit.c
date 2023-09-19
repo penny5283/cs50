@@ -23,7 +23,7 @@ int main(void)
         digit_count++;
 
         // store the first digit
-        if (card_number == 0 &&)
+        
         if (digit_count % 2 == 0)
         {
             digit *= 2;
