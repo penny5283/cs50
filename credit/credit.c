@@ -37,7 +37,6 @@ int main(void)
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
     {
-        card_number = card_number * 10 + digit; // Restore card_number to its original value
         if ((digit_count == 15) && ((card_number == 34) || (card_number == 37)))
         {
             printf("AMEX\n");
