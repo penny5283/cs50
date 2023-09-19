@@ -29,13 +29,12 @@ int main(void)
         {
             digit *= 2;
             if (digit >= 10)
-            first_digit = digit / 10;
+            digit = digit / 10;
             second_digit = digit % 10;
         }
         printf("%d", digit);
         printf("\n");
         sum += digit;
-        sum += first_digit;
         sum += second_digit;
     }
 
