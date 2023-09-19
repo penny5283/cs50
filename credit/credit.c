@@ -18,7 +18,8 @@ int main(void)
         digit = n % 10;
         n = n / 10;
         count++;
-        if (count % 2 ==0)
+
+        if (count % 2 == 0)
         {
             res += digit * 2;
         }
