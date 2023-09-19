@@ -26,7 +26,8 @@ int main(void)
         if (digit_count % 2 == 0)
         {
             digit *= 2;
-            if (digit >= 10) {
+            if (digit >= 10)
+            {
                 digit -= 9;
             }
         }
@@ -34,8 +35,8 @@ int main(void)
         sum += digit;
     }
 
-    //get the first two digits from original card number
-    while(original_card_number >= 100)
+    // get the first two digits from original card number
+    while (original_card_number >= 100)
     {
         original_card_number /= 10;
     }
@@ -52,7 +53,7 @@ int main(void)
         {
             printf("MASTERCARD\n");
         }
-        else if ((digit_count == 13 || digit_count == 16) && (first_two_digits/10 == 4))
+        else if ((digit_count == 13 || digit_count == 16) && (first_two_digits / 10 == 4))
         {
             printf("VISA\n");
         }
