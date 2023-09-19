@@ -35,7 +35,7 @@ int main(void)
     //get the first digit from original card number
     while(original_card_number > 0)
     {
-        
+
     }
 
     // Check if the card number is valid and determine its type
