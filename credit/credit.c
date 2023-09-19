@@ -22,7 +22,7 @@ int main(void)
     {
         digit = card_number % 10;
         card_number /= 10;
-        printf(card_number);
+        printf("%lli", card_number);
         digit_count++;
         if (digit_count % 2 == 0)
         {
