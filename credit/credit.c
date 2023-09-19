@@ -32,8 +32,7 @@ int main(void)
         }
         sum += digit;
     }
-    while(card_number>0)
-    first_digit = card_number;
+        first_digit = card_number;
 
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
