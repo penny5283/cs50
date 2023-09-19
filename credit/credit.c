@@ -14,7 +14,7 @@ int main(void)
     int sum = 0;
     int digit_count = 0;
     int res = 0;
-    int firstdigit = 0;
+    int firstdigit;
 
     while (card_number > 0)
     {
@@ -22,8 +22,9 @@ int main(void)
         card_number /= 10;
         digit_count++;
 
-        // store the first digit
-        
+        {
+            num /= 10;
+        }
         if (digit_count % 2 == 0)
         {
             digit *= 2;
