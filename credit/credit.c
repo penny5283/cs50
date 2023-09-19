@@ -32,6 +32,7 @@ int main(void)
         }
         sum += digit;
     }
+    first_digit = card_number;
 
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
@@ -48,10 +49,6 @@ int main(void)
         else if ((digit_count == 13 || digit_count == 16) && (first_digit == 4))
         {
             printf("VISA\n"); // Changed "CREDIT" to "VISA"
-        }
-        else
-        {
-            printf("INVALID\n"); // Added missing '\n' and semicolon
         }
     }
     else
