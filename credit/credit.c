@@ -36,8 +36,9 @@ if(sum % 10 == 0)
 {
     if(digit_count == 15 && (card_number ==34 || card_number == 37))
     {
-        prinf("AMEX\n");
+        printf("AMEX\n");
     }
     else if(digit_count == 16 && (card_number >= 51 && card_number <= 55))
-
+        printf("MASTERCARD\n");
+    else if((digit_count == 13 || digit_count ==16)) && (card_number / 10 ==4)
 }
