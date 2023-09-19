@@ -27,6 +27,8 @@ int main(void)
         {
             digit *= 2;
         }
+        printf("%d", digit);
+        printf("\n");
         sum += digit;
     }
 
