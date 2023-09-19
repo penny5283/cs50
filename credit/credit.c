@@ -16,12 +16,13 @@ int main(void)
     int first_digit = 0; // Initialize first_digit
     int digit;
     long long original_card_number = card_number;
-    
+
     // Calculate the sum of the credit card digits
     while (card_number > 0)
     {
         digit = card_number % 10;
         card_number /= 10;
+        printf(card_number);
         digit_count++;
         if (digit_count % 2 == 0)
         {
