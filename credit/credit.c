@@ -41,6 +41,8 @@ int main(void)
     }
     first_digit = original_card_number;
 
+    //get the second digit
+    
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
     {
