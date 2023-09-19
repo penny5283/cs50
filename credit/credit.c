@@ -21,7 +21,7 @@ int main(void)
         int digit = card_number % 10;
         card_number /= 10;
         digit_count++;
-        int first_digit = card_number;
+        first_digit = card_number;
 
         if (digit_count % 2 == 0)
         {
