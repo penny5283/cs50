@@ -40,8 +40,8 @@ int main(void)
         original_card_number /= 10;
     }
     first_two_digits = original_card_number;
-    printf(sum);
-    printf(digit_count);
+    printf("%d", sum);
+    printf("%d", digit_count);
     // Check if the card number is valid and determine its type
     if (sum % 10 == 0)
     {
