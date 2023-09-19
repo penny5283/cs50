@@ -26,10 +26,6 @@ int main(void)
         if (digit_count % 2 == 0)
         {
             digit *= 2;
-            if (digit > 9)
-            {
-                digit -= 10;
-            }
         }
         sum += digit;
     }
