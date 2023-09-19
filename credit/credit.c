@@ -21,7 +21,7 @@ int main(void)
         card_number /= 10;
         digit_count++;
         int frist_digit = card_number;
-        {
+
             num /= 10;
         }
         if (digit_count % 2 == 0)
@@ -34,7 +34,7 @@ int main(void)
             }
     }
     sum += digit;
-}
+
 // check if the card number is valid and determine its type
 if(sum % 10 == 0)
 {
