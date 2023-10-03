@@ -14,5 +14,13 @@ string ciphertext = cipher_input(plaintext);
 }
 int cipher_input(string plaintext)
 {
-    
+    string outcome = 0;
+    char alpha = 0;
+    for (int i = 0, n = strlen(plaintext); i < n; i++)
+    {
+        char alpha = plaintext[i];
+        outcome += alpha + 1;
+    }
+    return outcome;
 }
+
