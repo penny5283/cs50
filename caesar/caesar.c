@@ -10,9 +10,8 @@ do
 {
     printf("caesar key: ");
     int cipher_n = get_int("caesar key: ");
-    
 }
-while (cipher_n <= 0 );
+while (cipher_n <= 0||);
 //process the input
 string ciphertext = cipher_input(plaintext);
 //print the outcome in a proper way
