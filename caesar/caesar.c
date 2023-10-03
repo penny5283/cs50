@@ -7,8 +7,12 @@ int main(int argc, string argv[])
 {
 //get the input from user
 do
-int cipher_n = get_string("caesar key:");
-while (type(argc) != int||argv)
+{
+    printf("caesar key: ");
+    int cipher_n = get_int("caesar key: ");
+    
+}
+while (cipher_n <= 0 );
 //process the input
 string ciphertext = cipher_input(plaintext);
 //print the outcome in a proper way
@@ -21,7 +25,7 @@ int cipher_input(string plaintext)
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
         char alpha = plaintext[i];
-        outcome += alpha + 1;
+        outcome += alpha + cipher_n;
     }
     return outcome;
 }
