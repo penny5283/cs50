@@ -8,7 +8,7 @@ int main(int argc, string argv[])
 //get the input from user
 do
 int cipher_n = get_string("caesar key:");
-while (argc != 1||argv)
+while (type(argc) != int||argv)
 //process the input
 string ciphertext = cipher_input(plaintext);
 //print the outcome in a proper way
