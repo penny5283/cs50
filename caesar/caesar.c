@@ -8,7 +8,7 @@ int main(int argc, string argv[])
 //get the input from user
 do
 string plaintext = get_string("caesar key:");
-while ()
+while (isdigit())
 //process the input
 string ciphertext = cipher_input(plaintext);
 //print the outcome in a proper way
