@@ -10,6 +10,7 @@ do
 {
     printf("caesar key: ");
     int cipher_n = get_int("caesar key: ");
+    string plaintext = get_string("")
 }
 while (cipher_n <= 0||);
 //process the input
