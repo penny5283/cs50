@@ -6,7 +6,9 @@ string cipher_input(string plaintext);
 int main(int argc, string argv[])
 {
 //get the input from user
-string plaintext = get_string("Plaintext:");
+do
+string plaintext = get_string("caesar key:");
+while ()
 //process the input
 string ciphertext = cipher_input(plaintext);
 //print the outcome in a proper way
