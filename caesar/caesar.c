@@ -15,7 +15,7 @@ int main(int argc, string argv[])
     }
     string keystring = argv[1];
     for (int i = 0, n = strlen(keystring); i < n; i++){
-        if (isalpha(keystring[i])){
+        if (!isalpha(keystring[i])){
             printf ("Usage: ./caesar key\n");
             return 1;
         }
