@@ -13,7 +13,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    int key = argc;
+    int key = argv[1];
 
     if (key <= 0)
     {
