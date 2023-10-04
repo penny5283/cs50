@@ -8,7 +8,7 @@ string rotate(string plaintext, int key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2)
+    if (argc != 2 || isalpha(argv[1]))
     {
         printf("Usage: ./caesar key\n");
         return 1;
