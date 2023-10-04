@@ -8,20 +8,24 @@ string rotate(string plaintext, int key);
 
 int main(int argc, string argv[])
 {
-    if (argc != 2 || isalpha(argv[1]))
+    if (argc != 2)
     {
         printf("Usage: ./caesar key\n");
         return 1;
     }
 
-    string key = atoi(argv[1]);
+    string keystring = argv[1];
 
-        for (int i = 0, n = strlen(keystring); i < n; i++){
-        if (!isdigit(keystring[i])){
-            printf ("Usage: ./caesar key\n");
+    for (int i = 0, n = strlen(keystring); i < n; i++)
+    {
+        if (!isdigit(keystring[i]))
+        {
+            printf("Key must contain only numeric characters.\n");
             return 1;
         }
     }
+
+    int key = atoi(argv[1]);
 
     if (key <= 0)
     {
@@ -65,6 +69,4 @@ string rotate(string plaintext, int key)
     }
     return outcome;
 }
-
-
 
