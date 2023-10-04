@@ -39,6 +39,7 @@ int main(int argc, string argv[])
     if (argv[1] = 5||argv[1] = 6||argv[1] = 7||argv[1] = 8)
     {
         wordsize = argv[1];
+        printf ("You have 6 tries to guess the 5-letter word I'm thinking of\n")
     }
     else{
         printf("Error: wordsize must be either 5, 6, 7, or 8")
