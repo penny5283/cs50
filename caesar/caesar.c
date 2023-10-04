@@ -40,23 +40,17 @@ string rotate(string plaintext, int key)
 
         if (isalpha(alpha))
         {
-            char post_char = alpha + key;
+            char post_char = alpha;
 
             if (islower(alpha))
             {
                 // Rotate lowercase letters
-                if (post_char > 'z')
-                {
-                    post_char = 'a' + (post_char - 'z' - 1);
-                }
+                post_char = 'a' + ((alpha - 'a' + key) % 26 + 26) % 26;
             }
             else if (isupper(alpha))
             {
                 // Rotate uppercase letters
-                if (post_char > 'Z')
-                {
-                    post_char = 'A' + (post_char - 'Z' - 1);
-                }
+                post_char = 'A' + ((alpha - 'A' + key) % 26 + 26) % 26;
             }
 
             outcome[i] = post_char;
@@ -64,5 +58,6 @@ string rotate(string plaintext, int key)
     }
     return outcome;
 }
+
 
 
