@@ -117,7 +117,10 @@ string get_guess(int wordsize)
     // TODO #3
     guess = get_string("Input a 5-letter word:")
     do
-    
+    {
+        printf ("Input a 5-letter word:");
+    }
+    while (strlen(guess)!=5||!islower(guess));
     return guess;
 }
 
