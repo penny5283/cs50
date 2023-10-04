@@ -20,7 +20,7 @@ int main(int argc, string argv[])
     {
         if (!isdigit(keystring[i]))
         {
-            printf("Key must contain only numeric characters.\n");
+            printf("Usage: ./caesar key\n");
             return 1;
         }
     }
