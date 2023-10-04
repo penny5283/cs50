@@ -14,10 +14,10 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    int key = atoi(argv[1]);
+    string key = atoi(argv[1]);
 
         for (int i = 0, n = strlen(keystring); i < n; i++){
-        if (!isalpha(keystring[i])){
+        if (!isdigit(keystring[i])){
             printf ("Usage: ./caesar key\n");
             return 1;
         }
