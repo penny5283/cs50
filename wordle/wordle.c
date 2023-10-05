@@ -37,14 +37,16 @@ int main(int argc, string argv[])
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
-    if (argv[1] = 5||argv[1] = 6||argv[1] = 7||argv[1] = 8)
-    {
-        wordsize = argv[1];
-        printf ("You have 6 tries to guess the 5-letter word I'm thinking of\n")
+    if (wordsize != 5 && wordsize != 6 && wordsize != 7 && wordsize != 8) {
+        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
+        return 1;
     }
-    else{
-        printf("Error: wordsize must be either 5, 6, 7, or 8")
-    }
+
+    printf("You have 6 tries to guess the %d-letter word I'm thinking of\n", wordsize);
+
+    return 0;
+}
+
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
     sprintf(wl_filename, "%i.txt", wordsize);
