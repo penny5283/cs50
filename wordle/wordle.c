@@ -134,9 +134,9 @@ int check_word(string guess, int wordsize, int status[], string choice)
     int choice_dice[26]={0};
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
-    for (int i = 0, n = strlen (guess), i < n; i++)
+    for (int i = 0, i < strlen(guess); i++)
     {
-        for (int i = 0, n = strlen (choice), i < n; i++)
+        for (int i = 0, i < strlen(choice); i++)
         {
             char l_o_guess = guess[i];
             char l_o_choice = choice[i];
