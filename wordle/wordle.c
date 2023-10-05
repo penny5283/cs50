@@ -138,12 +138,9 @@ int check_word(string guess, int wordsize, int status[], string choice)
     {
         for (int i = 0, i < strlen(choice); i++)
         {
-            char l_o_guess = guess[i];
-            char l_o_choice = choice[i];
-            if (l_o_guess == l_o_choice)
-            {
-                score
-            }
+            char guess_letter = guess[i];
+            char choice_letter = choice[i];
+        
         }
     }
     // HINTS
