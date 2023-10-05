@@ -142,7 +142,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
             char l_o_choice = choice[i];
             if (l_o_guess == l_o_choice)
             {
-                score
+                score 
             }
         }
     }
