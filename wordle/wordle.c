@@ -130,7 +130,7 @@ string get_guess(int wordsize)
 int check_word(string guess, int wordsize, int status[], string choice)
 {
     int score = 0;
-
+    int guess_dict[]
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
     for (int i = 0, n = strlen (guess), i < n; i++)
