@@ -129,13 +129,15 @@ string get_guess(int wordsize)
 
 int check_word(string guess, int wordsize, int status[], string choice)
 {
-    int score = 0;
+    int exact_count = 0;
+    int close_count = 0;
     int guess_dict[26]={0};
     int choice_dice[26]={0};
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
     for (int i = 0, i < wordsize; i++)
     {
+
         for (int i = 0, i < wordsize; i++)
         {
             char guess_letter = guess[i];
