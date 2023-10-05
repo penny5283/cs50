@@ -28,7 +28,7 @@ int main(int argc, string argv[])
 {
     // ensure proper usage
     // TODO #1
-    if (argv[1] = ""|| !isdigit(argv[1]))
+    if (argc != 2|| argv[1][0] == '\0')
     {
         printf ("Usage: ./wordle wordsize");
         return 1;
