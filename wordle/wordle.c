@@ -137,11 +137,10 @@ int check_word(string guess, int wordsize, int status[], string choice)
     // TODO #5
     for (int i = 0, i < wordsize; i++)
     {
-
+        char guess_letter = guess[i];
         for (int i = 0, i < wordsize; i++)
         {
-            char guess_letter = guess[i];
-            char choice_letter = choice[i];
+    char choice_letter = choice[i];
 
         }
     }
