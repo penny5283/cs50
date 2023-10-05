@@ -33,7 +33,7 @@ int main(int argc, string argv[])
         printf ("Usage: ./wordle wordsize");
         return 1;
     }
-    int wordsize = 0;
+    int wordsize = atoi(argv[1]);
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
@@ -41,7 +41,7 @@ int main(int argc, string argv[])
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
-    wordsize = atoi(argv[1]);
+
     printf("You have 6 tries to guess the %d-letter word I'm thinking of\n", wordsize);
 
     return 0;
