@@ -41,7 +41,7 @@ int main(int argc, string argv[])
         printf("Error: wordsize must be either 5, 6, 7, or 8\n");
         return 1;
     }
-
+    wordsize = 
     printf("You have 6 tries to guess the %d-letter word I'm thinking of\n", wordsize);
 
     return 0;
