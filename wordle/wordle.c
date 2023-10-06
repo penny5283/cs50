@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include <ctype.h>
 
 // each of our text files contains 1000 words
 #define LISTSIZE 1000
@@ -28,12 +27,15 @@ int main(int argc, string argv[])
 {
     // ensure proper usage
     // TODO #1
+
+    int wordsize = 0;
+
     if (argc != 2|| argv[1][0] == '\0')
     {
         printf ("Usage: ./wordle wordsize");
         return 1;
     }
-    int wordsize = atoi(argv[1]);
+    wordsize = atoi(argv[1]);
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
@@ -85,7 +87,7 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-            status[wordsize] = {0};
+        
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
 
@@ -126,21 +128,11 @@ string get_guess(int wordsize)
 
 int check_word(string guess, int wordsize, int status[], string choice)
 {
-    int exact_count = 0;
-    int close_count = 0;
-    int guess_dict[26]={0};
-    int choice_dice[26]={0};
+    int score = 0;
+
     // compare guess to choice and score points as appropriate, storing points in status
     // TODO #5
-    for (int i = 0, i < wordsize; i++)
-    {
-        char guess_letter = guess[i];
-        for (int i = 0, i < wordsize; i++)
-        {
-        char choice_letter = choice[i];
 
-        }
-    }
     // HINTS
     // iterate over each letter of the guess
         // iterate over each letter of the choice
