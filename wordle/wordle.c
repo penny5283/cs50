@@ -145,7 +145,10 @@ int check_word(string guess, int wordsize, int status[], string choice)
             char current_choice = choice[j];
             if(current_guess == current_choice)
             {
-                
+                if (i == j)
+                {
+                    
+                }
             }
         }
     }
