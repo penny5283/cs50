@@ -179,15 +179,15 @@ void print_word(string guess, int wordsize, int status[])
         char current_guess = guess[i];
         if (status[i] == 2)
         {
-            printf(GREEN"%s",current_guess);
+            printf(GREEN"%c",current_guess);
         }
         else if (status[i] == 1)
         {
-            printf(YELLOW"%s",current_guess);
+            printf(YELLOW"%c",current_guess);
         }
         else
         {
-            printf(RED"%s",current_guess);
+            printf(RED"%c",current_guess);
         }
     }
     printf("\n");
