@@ -36,6 +36,7 @@ int main(int argc, string argv[])
         return 1;
     }
     wordsize = atoi(argv[1]);
+    printf("%d", wordsize);
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
@@ -87,7 +88,7 @@ int main(int argc, string argv[])
 
         // set all elements of status array initially to 0, aka WRONG
         // TODO #4
-        
+
         // Calculate score for the guess
         int score = check_word(guess, wordsize, status, choice);
 
