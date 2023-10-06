@@ -148,6 +148,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 if (i == j)
                 {
                     status[i] = 2;
+                    break;
                 }
                 else
                 {
@@ -160,6 +161,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
             }
         }
     }
+    score += status[wordsize];
     // HINTS
     // iterate over each letter of the guess
         // iterate over each letter of the choice
