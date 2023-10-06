@@ -36,7 +36,6 @@ int main(int argc, string argv[])
         return 1;
     }
     wordsize = atoi(argv[1]);
-    printf("%d", wordsize);
 
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
