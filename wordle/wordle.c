@@ -89,7 +89,7 @@ int main(int argc, string argv[])
         // TODO #4
         for (int j = 0; j < wordsize; j++)
         {
-            status[j] = 0;
+            status[j] = WRONG;
         }
 
         // Calculate score for the guess
@@ -147,12 +147,12 @@ int check_word(string guess, int wordsize, int status[], string choice)
             {
                 if (i == j)
                 {
-                    status[i] = 2;
+                    status[i] = EXACT;
                     break;
                 }
                 else
                 {
-                    status[i] = 1;
+                    status[i] = CLOSE;
                 }
             }
         }
@@ -177,11 +177,11 @@ void print_word(string guess, int wordsize, int status[])
     for(int i = 0; i < wordsize; i++ )
     {
         char current_guess = guess[i];
-        if (status[i] == 2)
+        if (status[i] == EXACT)
         {
             printf(GREEN"%c",current_guess);
         }
-        else if (status[i] == 1)
+        else if (status[i] == CLOSE)
         {
             printf(YELLOW"%c",current_guess);
         }
