@@ -30,8 +30,21 @@ int main(int argc, string argv[])
 
     int wordsize = 0;
 
+    if (argc != 2|| argv[1][0] == '\0')
+    {
+        printf ("Usage: ./wordle wordsize");
+        return 1;
+    }
+    wordsize = atoi(argv[1]);
+
     // ensure argv[1] is either 5, 6, 7, or 8 and store that value in wordsize instead
     // TODO #2
+    if (wordsize != 5 && wordsize != 6 && wordsize != 7 && wordsize != 8) {
+        printf("Error: wordsize must be either 5, 6, 7, or 8\n");
+        return 1;
+    }
+
+    printf("You have 6 tries to guess the %d-letter word I'm thinking of\n", wordsize);
 
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
