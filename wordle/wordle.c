@@ -116,7 +116,7 @@ int main(int argc, string argv[])
     }
     else
     {
-        printf("The correct word is %s", choice);
+        printf("The correct word is %s\n", choice);
     }
     // that's all folks!
     return 0;
