@@ -160,7 +160,7 @@ int check_word(string guess, int wordsize, int status[], string choice)
                 status[i] = 0;
             }
         }
-        score += status[wordsize];
+        score += status[i];
     }
 
     // HINTS
