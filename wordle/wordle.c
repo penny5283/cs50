@@ -45,7 +45,6 @@ int main(int argc, string argv[])
     printf("You have 6 tries to guess the %d-letter word I'm thinking of\n", wordsize);
 
     return 0;
-}
 
     // open correct file, each file has exactly LISTSIZE words
     char wl_filename[6];
