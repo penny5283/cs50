@@ -1,15 +1,14 @@
-sort1 uses: TODO
-Bubble Sort
-How do you know?: TODO
-5000:0.035 10000:0.136 50000:4.989
+sort1 uses: Bubble Sort
+
+How do you know?: 5000:0.035 10000:0.136 50000:4.989
 5000:0.007 10000:0.000 50000:0.017
-sort2 uses: TODO
-Merge Sort
-How do you know?: TODO
-5000:0.004 10000:0.003 50000:0.019
+
+sort2 uses: Merge Sort
+
+How do you know?: 5000:0.004 10000:0.003 50000:0.019
 5000:0.000 10000:0.005 50000:0.028
-sort3 uses: TODO
-Selection Sort
-How do you know?: TODO
-5000:0.027 10000:0.079 50000:1.800
+
+sort3 uses: Selection Sort
+
+How do you know?: 5000:0.027 10000:0.079 50000:1.800
 5000:0.018 10000:0.071 50000:1.832
