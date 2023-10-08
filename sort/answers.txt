@@ -1,7 +1,7 @@
 sort1 uses: TODO
 Bubble Sort
 How do you know?: TODO
-O = 0.031; omega = 0.027
+5000:0.035 10000: 0.136 50000:
 sort2 uses: TODO
 
 How do you know?: TODO
