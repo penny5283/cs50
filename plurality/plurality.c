@@ -69,7 +69,7 @@ bool vote(string name)
     // TODO
     for(int i = 0; i < candidate_count; i++)
     {
-        if(s)
+        if(name == )
     }
     return false;
 }
