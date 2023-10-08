@@ -5,7 +5,7 @@ O = 5.027; omega = 0.027
 sort2 uses: TODO
 
 How do you know?: TODO
-O = 0.029; omega = 0.040
+O = 0.029; omega = 0.019
 sort3 uses: TODO
 
 How do you know?: TODO
