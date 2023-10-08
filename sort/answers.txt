@@ -1,7 +1,7 @@
 sort1 uses: TODO
 Bubble Sort
 How do you know?: TODO
-5000:0.035 10000: 0.136 50000:
+5000:0.035 10000: 0.136 50000:4.989
 sort2 uses: TODO
 
 How do you know?: TODO
