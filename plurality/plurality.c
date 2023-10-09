@@ -82,9 +82,10 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    int current = candidates[i].votes;
+    int current;
     for(int i = 0; i < candidate_count; i++)
     {
+        current = candidates[i].votes;
         if(current >= candidates[i+1].votes)
         {
             continue;
@@ -96,9 +97,9 @@ void print_winner(void)
     }
     for(int i = 0; i < candidate_count; i++)
     {
-        if(current = candidates[i].votes)
+        if(current == candidates[i].votes)
         {
-            printf("%s",candidates[i].name)
+            printf("%s",candidates[i].name);
         }
     }
     return;
