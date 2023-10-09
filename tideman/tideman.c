@@ -195,12 +195,14 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // TODO
+    int start[] = 0;
+    int end = 0;
     for(int i = 0; i < pair_count; i++)
     {
         int winner = pairs[i].winner;
         int loser = pairs[i].loser;
-        if(locked[winner])
-       locked[winner][loser]
+       locked[winner][loser];
+       start
     }
     return;
 }
