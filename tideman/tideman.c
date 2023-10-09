@@ -171,7 +171,7 @@ void sort_pairs(void)
     for(int i = 0; i < strlen(outcome); i++)
     {
         int max = outcome[0];
-        if
+        
     }
     return;
 }
