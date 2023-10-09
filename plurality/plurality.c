@@ -85,7 +85,15 @@ void print_winner(void)
     for(int i = 0; i < candidate_count; i++)
     {
         int current = candidates[i].votes;
-        if(current < )
+        if(current >= candidates[i+1].votes)
+        {
+            continue;
+        }
+        else
+        {
+            current = candidates[i+1].votes
+        }
     }
+    printf("%s",candidates[i])
     return;
 }
