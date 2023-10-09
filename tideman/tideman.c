@@ -159,10 +159,12 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
-    int count_strength = 0;
+    int strength[pair_count];
+
     for(int i = 0; i < pair_count; i++)
     {
-        int current_winner = pairs[i].winner;
+        int winner = pairs[i].winner;
+        int loser = pairs[i].loser;
         if (current_winner == paires[i+1].winner)
         {
             count_strength ++;
