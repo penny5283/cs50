@@ -168,7 +168,10 @@ void sort_pairs(void)
             count_strength ++;
         }
     } add each count_strength into an array outcome
-    for(int i = 0; i < )
+    for(int i = 0; i < strlen(outcome); i++)
+    {
+        
+    }
     return;
 }
 
