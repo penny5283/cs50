@@ -170,7 +170,8 @@ void sort_pairs(void)
     }
     //sort pairs
     for(int i = 0; i < pair_count - 1; i++)
-        for(int j = 0; j < pair_count - i)
+        for(int j = 0; j < pair_count - i - 1; j++)
+            if(strengths[j] < strengths[])
     return;
 }
 
