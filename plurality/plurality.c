@@ -91,7 +91,7 @@ void print_winner(void)
         }
         else
         {
-            current = candidates[i+1].votes
+            current = candidates[i+1].votes;
         }
     }
     printf("%s",candidates[i])
