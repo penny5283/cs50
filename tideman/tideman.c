@@ -159,9 +159,14 @@ void add_pairs(void)
 void sort_pairs(void)
 {
     // TODO
+    int count_strength = 0;
     for(int i = 0; i < pair_count; i++)
     {
-        
+        int current_winner = pairs[i].winner;
+        if (current_winner == paires[i+1].winner)
+        {
+            count_strength ++;
+        }
     }
     return;
 }
