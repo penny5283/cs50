@@ -165,22 +165,15 @@ void sort_pairs(void)
     {
         int winner = pairs[i].winner;
         int loser = pairs[i].loser;
-        if (current_winner == paires[i+1].winner)
-        {
-            count_strength ++;
-        }
-    } add each count_strength into an array outcome
-    for(int i = 0; i < strlen(outcome);i++)
-        for(int j = 0; j < strlen(outcome); j++)
-        {
-            int max = outcome[0];
-            if (max < outcome[1])
-            {
-                max = outcome[1]
-            }
-        }
+
+        strengths[i] = preferences[winner][loser] - preferences[loser][winner];
+    }
+    //sort pairs
+    for(int i =0; i < pair_count - 1; i++)
+        
     return;
 }
+
 
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
