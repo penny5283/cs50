@@ -171,7 +171,13 @@ void sort_pairs(void)
     //sort pairs
     for(int i = 0; i < pair_count - 1; i++)
         for(int j = 0; j < pair_count - i - 1; j++)
-            if(strengths[j] < strengths[])
+            if(strengths[j] < strengths[j+1])
+
+            //swap the places of strengths
+            int temp = strengths[j];
+            strengths[j] = strengths[j+1];
+            strengths[j+1] = temp;
+            
     return;
 }
 
