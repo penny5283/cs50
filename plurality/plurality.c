@@ -82,6 +82,10 @@ bool vote(string name)
 void print_winner(void)
 {
     // TODO
-    for
+    for(int i = 0; i < candidate_count; i++)
+    {
+        int current = candidates[i].votes;
+        if(current < )
+    }
     return;
 }
