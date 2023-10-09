@@ -166,20 +166,20 @@ void sort_pairs(void)
         int winner = pairs[i].winner;
         int loser = pairs[i].loser;
 
-        strengths[i] = preferences[winner][loser] - preferences[loser][winner];
+        strength[i] = preferences[winner][loser] - preferences[loser][winner];
     }
     //sort pairs
     for(int i = 0; i < pair_count - 1; i++)
         {
         for(int j = 0; j < pair_count - i - 1; j++)
            {
-            if(strengths[j] < strengths[j+1])
+            if(strength[j] < strength[j+1])
 
             //swap the places of strengths
             {
-                int temp = strengths[j];
-                strengths[j] = strengths[j+1];
-                strengths[j+1] = temp;
+                int temp = strength[j];
+                strength[j] = strength[j+1];
+                strength[j+1] = temp;
                 //swap pairs
                 pair temp_pair = pairs[j];
                 pairs[j] = pairs[j+1];
