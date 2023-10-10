@@ -203,6 +203,7 @@ void lock_pairs(void)
         int winner = pairs[i].winner;
         int loser = pairs[i].loser;
         //check if winner is already in the loser
+        for(int j = 0; j < los)
     }
     return;
 }
