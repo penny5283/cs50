@@ -16,8 +16,7 @@ typedef struct
 {
     int winner;
     int loser;
-}
-pair;
+} pair;
 
 // Array of candidates
 string candidates[MAX];
@@ -101,9 +100,9 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // TODO
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
-        if(strcmp(candidates[i], name) == 0)
+        if (strcmp(candidates[i], name) == 0)
         {
             ranks[rank] = i;
             return true;
@@ -124,23 +123,22 @@ void record_preferences(int ranks[])
     }
 }
 
-
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
     // TODO
     pair_count = 0;
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         for (int j = i + 1; j < candidate_count; j++)
         {
-            if(preferences[i][j] > preferences[j][i])
+            if (preferences[i][j] > preferences[j][i])
             {
                 pairs[pair_count].winner = i;
                 pairs[pair_count].loser = j;
                 pair_count++;
             }
-            else if(preferences[i][j] < preferences[j][i])
+            else if (preferences[i][j] < preferences[j][i])
             {
                 pairs[pair_count].winner = j;
                 pairs[pair_count].loser = i;
@@ -157,35 +155,34 @@ void sort_pairs(void)
     // TODO
     int strength[pair_count];
 
-    for(int i = 0; i < pair_count; i++)
+    for (int i = 0; i < pair_count; i++)
     {
         int winner = pairs[i].winner;
         int loser = pairs[i].loser;
 
         strength[i] = preferences[winner][loser] - preferences[loser][winner];
     }
-    //sort pairs
-    for(int i = 0; i < pair_count - 1; i++)
+    // sort pairs
+    for (int i = 0; i < pair_count - 1; i++)
+    {
+        for (int j = 0; j < pair_count - i - 1; j++)
         {
-        for(int j = 0; j < pair_count - i - 1; j++)
-           {
-            if(strength[j] < strength[j+1])
+            if (strength[j] < strength[j + 1])
 
-            //swap the places of strengths
+            // swap the places of strengths
             {
                 int temp = strength[j];
-                strength[j] = strength[j+1];
-                strength[j+1] = temp;
-                //swap pairs
+                strength[j] = strength[j + 1];
+                strength[j + 1] = temp;
+                // swap pairs
                 pair temp_pair = pairs[j];
-                pairs[j] = pairs[j+1];
-                pairs[j+1] = temp_pair;
+                pairs[j] = pairs[j + 1];
+                pairs[j + 1] = temp_pair;
             }
         }
-        }
+    }
     return;
 }
-
 
 // Lock pairs into the candidate graph in order, without creating cycles
 bool creates_cycle(int start, int end);
@@ -226,7 +223,7 @@ void print_winner(void)
 
         for (int j = 0; j < candidate_count; j++)
         {
-            if (locked[j][i])  // Check if candidate i has an incoming edge from candidate j
+            if (locked[j][i]) // Check if candidate i has an incoming edge from candidate j
             {
                 has_incoming_edge = true;
                 break;
