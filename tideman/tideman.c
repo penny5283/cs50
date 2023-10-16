@@ -105,7 +105,7 @@ bool vote(int rank, string name, int ranks[])
     {
         if(strcmp(candidates[i], name) == 0)
         {
-            ranks[i] = rank;
+            ranks[rank] = i;
             return true;
         }
     }
@@ -115,24 +115,15 @@ bool vote(int rank, string name, int ranks[])
 // Update preferences given one voter's ranks
 void record_preferences(int ranks[])
 {
-    // TODO
-    for(int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count - 1; i++)
     {
-        int current_rank = ranks[i];
-        for (int j = i + 1; j < candidate_count; j++){
-            int next_rank = ranks[j];
-            if (current_rank < next_rank)
-            {
-                preferences[i][j]++;
-            }
-            else if (current_rank > next_rank)
-            {
-                preferences[j][i]++;
-            }
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            preferences[ranks[i]][ranks[j]]++;
         }
     }
-    return;
 }
+
 
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
@@ -197,15 +188,56 @@ void sort_pairs(void)
 
 
 // Lock pairs into the candidate graph in order, without creating cycles
+bool creates_cycle(int start, int end);
+
 void lock_pairs(void)
 {
-    // TODO
-    return;
+    for (int i = 0; i < pair_count; i++)
+    {
+        if (!creates_cycle(pairs[i].loser, pairs[i].winner))
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+        }
+    }
+}
+
+bool creates_cycle(int start, int end)
+{
+    if (start == end)
+    {
+        return true;
+    }
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (locked[start][i] && creates_cycle(i, end))
+        {
+            return true;
+        }
+    }
+    return false;
 }
 
 // Print the winner of the election
 void print_winner(void)
 {
-    // TODO
-    return;
+    for (int i = 0; i < candidate_count; i++)
+    {
+        bool has_incoming_edge = false;
+
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (locked[j][i])  // Check if candidate i has an incoming edge from candidate j
+            {
+                has_incoming_edge = true;
+                break;
+            }
+        }
+
+        // If the candidate has no incoming edges, print their name and return
+        if (!has_incoming_edge)
+        {
+            printf("%s\n", candidates[i]);
+            return;
+        }
+    }
 }
