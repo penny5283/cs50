@@ -41,9 +41,10 @@ person *create_family(int generations)
     // TODO: Allocate memory for new person
 
     person *new_person = malloc(sizeof(person));
-    if (new_person == NULL) {
-    // Handle the memory allocation error, maybe by returning NULL or printing an error message
-    return NULL;
+    if (new_person == NULL)
+    {
+        // Handle the memory allocation error, maybe by returning NULL or printing an error message
+        return NULL;
     }
 
     // If there are still generations left to create
@@ -54,14 +55,13 @@ person *create_family(int generations)
         person *parent1 = create_family(generations - 1);
 
         // TODO: Set parent pointers for current person
-        new_person -> parents[0] = parent0;
-        new_person -> parents[1] = parent1;
+        new_person->parents[0] = parent0;
+        new_person->parents[1] = parent1;
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
-    int random_index_for_parent0 = rand() % 2;
-    int random_index_for_parent1 = rand() % 2;
-    new_person->alleles[0] = parent0->alleles[random_index_for_parent0];
-    new_person->alleles[1] = parent1->alleles[random_index_for_parent1];
-
+        int random_index_for_parent0 = rand() % 2;
+        int random_index_for_parent1 = rand() % 2;
+        new_person->alleles[0] = parent0->alleles[random_index_for_parent0];
+        new_person->alleles[1] = parent1->alleles[random_index_for_parent1];
     }
 
     // If there are no generations left to create
@@ -91,8 +91,8 @@ void free_family(person *p)
     // TODO: Free parents recursively
     else
     {
-        free_family (p->parents[0]);
-        free_family (p->parents[1]);
+        free_family(p->parents[0]);
+        free_family(p->parents[1]);
     }
 
     // TODO: Free child
