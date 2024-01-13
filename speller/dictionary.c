@@ -51,7 +51,10 @@ bool load(const char *dictionary)
         }
         //copy the word into the node
         strcpy(new_node->word, word);
-        hash(new_node->word)
+        unsigned int index = hash(word);
+        // Insert the node at the beginning of the linked list in the bucket
+        new_node->next;
+        head_
     }
     return false;
 }
