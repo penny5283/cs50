@@ -40,7 +40,7 @@ bool load(const char *dictionary)
     if (file == NULL) {
         return false;
     }
-    while(return EOF)
+    while(fscanf(file, "%s", word) != EOF)
     {
         fscanf(dictionary,"%s", word)
     }
