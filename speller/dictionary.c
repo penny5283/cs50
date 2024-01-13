@@ -54,8 +54,8 @@ bool load(const char *dictionary)
         unsigned int index = hash(word);
         // Insert the node at the beginning of the linked list in the bucket
         new_node->next = table[index];
-        table[]
-        head_
+        table[index] = new_node;
+        
     }
     return false;
 }
