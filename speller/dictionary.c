@@ -51,6 +51,7 @@ bool load(const char *dictionary)
         }
         //copy the word into the node
         strcpy(new_node->word, word);
+        hash(new_node->word)
     }
     return false;
 }
