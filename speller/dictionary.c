@@ -55,7 +55,6 @@ bool load(const char *dictionary)
         // Insert the node at the beginning of the linked list in the bucket
         new_node->next = table[index];
         table[index] = new_node;
-        
     }
     return false;
 }
