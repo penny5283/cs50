@@ -41,11 +41,16 @@ bool load(const char *dictionary)
         return false;
     }
     char word[LENGTH + 1];
-    node *new_node = malloc(sizeof(node));
+
     while(fscanf(file, "%s", word) != EOF)
     {
-        FILE *file = malloc (sizeof(word))
-        char strcpy(node->word, const char )
+        node *new_node = malloc(sizeof(node));
+        if (new_node == NULL)
+        {
+            fclose(file);
+        }
+        //copy the word into the node
+        strcpy(new_node->word, word);
     }
     return false;
 }
