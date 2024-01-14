@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "dictionary.h"
-
+extern int count;
 // Represents a node in a hash table
 typedef struct node
 {
@@ -49,9 +49,10 @@ bool load(const char *dictionary)
         return false;
     }
     char word[LENGTH + 1];
-
+    count = 0;
     while(fscanf(file, "%s", word) != EOF)
     {
+        count += 1;
         node *new_node = malloc(sizeof(node));
         if (new_node == NULL)
         {
@@ -71,7 +72,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    return count;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
