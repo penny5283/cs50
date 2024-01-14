@@ -35,10 +35,6 @@ unsigned int hash(const char *word)
     {
         index += (toupper(word[0]) - 'A') * 26
     }
-    if(len > 1)
-    {
-        index += toupper(word[1] - 'A')
-    }
     return index % N;
 }
 
