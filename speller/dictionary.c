@@ -93,9 +93,10 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    node *cursor = 0;
     for(int i = 0; i < N; i++)
     {
-    node *cursor = table[i];
+    cursor = table[i];
     while(cursor != NULL)
     {
         node *tmp = cursor;
@@ -103,5 +104,6 @@ bool unload(void)
         free(tmp);
     }
     }
+    free(cursor);
     return true;
 }
