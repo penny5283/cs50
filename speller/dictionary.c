@@ -65,7 +65,6 @@ bool load(const char *dictionary)
     count = 0;
     while(fscanf(file, "%s", word) != EOF)
     {
-        count += 1;
         node *new_node = malloc(sizeof(node));
         if (new_node == NULL)
         {
@@ -78,6 +77,7 @@ bool load(const char *dictionary)
         // Insert the node at the beginning of the linked list in the bucket
         new_node->next = table[index];
         table[index] = new_node;
+        count++;
     }
     return true;
 }
