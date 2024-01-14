@@ -24,7 +24,8 @@ bool check(const char *word)
     // TODO
     unsigned int index = 0;
     index = hash(word);
-
+    node *head = table[index];
+    while()
     return false;
 }
 
