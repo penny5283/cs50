@@ -24,8 +24,11 @@ bool check(const char *word)
     // TODO
     unsigned int index = 0;
     index = hash(word);
-    node *po = table[index];
-    while()
+    node *cursor = table[index];
+    while(cursor != NULL)
+    {
+        
+    }
     return false;
 }
 
