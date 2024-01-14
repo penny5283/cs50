@@ -31,7 +31,12 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     unsigned int index = 0;
     int len = strlen(word);
-    index += (toupper(word[0]) - 'A') * 26;
+    if (len > 0) {
+        index += (toupper(word[0]) - 'A') * 26 * 26;
+    }
+    if (len > 1) {
+        index += (toupper(word[1]) - 'A') * 26;
+    }
     return index % N;
 }
 
