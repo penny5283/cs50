@@ -90,5 +90,6 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
+    node *cursor = table[]
     return false;
 }
