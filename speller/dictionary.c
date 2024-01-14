@@ -70,6 +70,7 @@ bool load(const char *dictionary)
         if (new_node == NULL)
         {
             fclose(file);
+            return false;
         }
         //copy the word into the node
         strcpy(new_node->word, word);
