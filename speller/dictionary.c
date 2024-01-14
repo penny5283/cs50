@@ -99,7 +99,7 @@ bool unload(void)
         cursor = cursor -> next;
         free(tmp);
     }
+    return True;
     }
-
     return false;
 }
