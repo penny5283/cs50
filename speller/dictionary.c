@@ -4,7 +4,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "dictionary.h"
-#include <string.h>
+#include <strings.h>
+#include <stdlib.h> 
 extern int count;
 // Represents a node in a hash table
 typedef struct node
