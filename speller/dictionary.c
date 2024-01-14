@@ -4,9 +4,10 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "dictionary.h"
+#include <string.h>
+#include <stdlib.h>
 #include <strings.h>
-#include <stdlib.h> 
-extern int count;
+int count;
 // Represents a node in a hash table
 typedef struct node
 {
@@ -77,7 +78,7 @@ bool load(const char *dictionary)
         new_node->next = table[index];
         table[index] = new_node;
     }
-    return false;
+    return true;
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
