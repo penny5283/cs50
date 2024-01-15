@@ -16,4 +16,4 @@ With a small number of simulations...the winning chance of spain go from 20 to a
 Suppose you're charged a fee for each second of compute time your program uses.
 After how many simulations would you call the predictions "good enough"?:
 
-t seems like the predictions stabilized after about...
+It seems like the predictions stabilized after about 1000 times
