@@ -59,9 +59,12 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # TODO
-    if len(teams) == 0 or len(teams)(n & (n - 1)) == 0
-    winners = simulate_round(teams)
-    while len(winners) != 1:
+    l = len(teams)
+    if l == 0 or (l & (l - 1)) != 0:
+        return false
+    else:
+        winners = simulate_round(teams)
+        while len(winners) != 1:
         winners = simulate_round(winners)
     return winners[0]
 
