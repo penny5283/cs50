@@ -66,11 +66,16 @@ bool load(const char *dictionary)
     while(fscanf(file, "%s", word) != EOF)
     {
         node *new_node = malloc(sizeof(node));
-        if (new_node == NULL)
-        {
-            fclose(file);
-            return false;
-        }
+      if (new_node == NULL) {
+            // Free all previously allocated memory
+            for (int i = 0; i < N; i++) {
+                node *cursor = table[i];
+                while (cursor != NULL) {
+                    node *tmp = cursor;
+                    cursor = cursor->next;
+                    free(tmp);
+                }
+            }
         //copy the word into the node
         strcpy(new_node->word, word);
         unsigned int index = hash(word);
