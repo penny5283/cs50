@@ -54,19 +54,18 @@ unsigned int hash(const char *word)
 }
 
 // Loads dictionary into memory, returning true if successful, else false
-bool load(const char *dictionary)
-{
-    // TODO
+bool load(const char *dictionary) {
     FILE *file = fopen(dictionary, "r");
     if (file == NULL) {
         return false;
     }
+
     char word[LENGTH + 1];
     count = 0;
-    while(fscanf(file, "%s", word) != EOF)
-    {
+
+    while (fscanf(file, "%s", word) != EOF) {
         node *new_node = malloc(sizeof(node));
-      if (new_node == NULL) {
+        if (new_node == NULL) {
             // Free all previously allocated memory
             for (int i = 0; i < N; i++) {
                 node *cursor = table[i];
@@ -76,14 +75,18 @@ bool load(const char *dictionary)
                     free(tmp);
                 }
             }
-        //copy the word into the node
+            fclose(file);  // Close the file before returning
+            return false;
+        }
+
         strcpy(new_node->word, word);
         unsigned int index = hash(word);
-        // Insert the node at the beginning of the linked list in the bucket
         new_node->next = table[index];
         table[index] = new_node;
         count++;
     }
+
+    fclose(file);  // Close the file after successful loading
     return true;
 }
 
