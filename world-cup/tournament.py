@@ -61,7 +61,7 @@ def simulate_tournament(teams):
     # TODO
     l = len(teams)
     if l == 0 or (l & (l - 1)) != 0:
-        return false
+        return False
     else:
         winners = simulate_round(teams)
         while len(winners) != 1:
