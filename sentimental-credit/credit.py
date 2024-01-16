@@ -16,7 +16,6 @@ def check_luhn(card_number):
         double = i * 2
         if double >= 10:
             
-
 if re.match(input, amex_regex):
     print("AMEX")
 if re.match(input, mastercard_regex):
