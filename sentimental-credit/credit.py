@@ -6,6 +6,7 @@ mastercard_regex = r"^(5[1-5][0-9]{14}|2[3-6][0-9]{14}|27[0-1][0-9]{14}|2720[0-9
 visa_regex = r"^4[0-9]{12}([0-9]{3})?$"
 input_number = get_string("Number:")
 
+
 def check_luhn(card_number):
     def digits_of(n):
         return [int(i) for i in str(n)]  # Convert each digit to int
@@ -27,6 +28,7 @@ def check_luhn(card_number):
 
     return total_sum % 10 == 0
 
+
 # Matching card type and validating with Luhn's algorithm
 if re.match(amex_regex, input_number):
     print("AMEX")
@@ -39,5 +41,3 @@ elif re.match(visa_regex, input_number):
         print("INVALID")
 else:
     print("INVALID")
-
-
