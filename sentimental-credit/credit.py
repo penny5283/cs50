@@ -20,8 +20,20 @@ def check_luhn(card_number):
             seperated_digits = [int(each_digit)for each_digit in doubled]
             for i in seperated_digits:
                 sum += i
+        else:
+            sum += i
+    for i in even_digits:
+        sum += i
+    return sum[-1]
 if re.match(input, amex_regex):
     print("AMEX")
-if re.match(input, mastercard_regex):
+elif re.match(input, mastercard_regex):
     print("MASTERCARD")
+elif re.match(input, visa_regex):
+    c = check_luhn(input)
+    if c == 0:
+        print("VISA")
+else:
+    print("INVALID")
+
 
