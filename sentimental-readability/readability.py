@@ -11,6 +11,14 @@ def check_words(text):
     count_w = 0
     pre = None
     for i in text:
-        if 
+        if i == " ":
+            count_w += 1
+            pre = i
+    #check if the last word is not a space to include the last word
+    if pre != " ":
+        count_w += 1
+    return count_w
+
+def
 
 
