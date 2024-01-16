@@ -13,7 +13,9 @@ def check_luhn(card_number):
     odd_digits = digits[-2::-2]
     even_digits = digits[-1::-2]
     for i in odd_digits:
-        
+        double = i * 2
+        if double >= 10:
+            
 
 if re.match(input, amex_regex):
     print("AMEX")
