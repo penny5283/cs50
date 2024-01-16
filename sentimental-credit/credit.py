@@ -7,13 +7,14 @@ visa_regex = visa_regex = r"^4[0-9]{12}([0-9]{3})?$"
 input = get_string("Number:")
 def check_luhn(card_number):
     def digits_of(n):
-        for i in n():
+        for i in n:
             return int(i)
     digits = digits_of(card_number)
     odd_digits = digits[-2::-2]
     even_digits = digits[-1::-2]
-    for i in odd_digits():
+    for i in odd_digits:
         
+
 if re.match(input, amex_regex):
     print("AMEX")
 if re.match(input, mastercard_regex):
