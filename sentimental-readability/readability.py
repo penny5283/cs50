@@ -19,6 +19,10 @@ def check_words(text):
         count_w += 1
     return count_w
 
-def
+def check_sentences(text):
+    count_s = 0
+    for i in text:
+        if i == ""
+
 
 
