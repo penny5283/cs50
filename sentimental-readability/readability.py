@@ -25,7 +25,7 @@ else:
     index = 0.0588 * L - 0.296 * S - 15.8
 
 # Format the result to one decimal place
-formatted_index = round(index, 1)
+formatted_index = round(index)
 
 if formatted_index < 1:
     print("Before Grade 1")
