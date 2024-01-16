@@ -12,18 +12,15 @@ def check_luhn(card_number):
     digits = digits_of(card_number)
     odd_digits = digits[-2::-2]
     even_digits = digits[-1::-2]
+    total_sum = 0
     for i in odd_digits:
-        sum = 0
         doubled = i * 2
         if doubled >= 10:
-            doubled = str(doubled)
-            seperated_digits = [int(each_digit)for each_digit in doubled]
-            for i in seperated_digits:
-                sum += i
+            total_sum += sum(digits_of(doubled))
         else:
-            sum += i
+            total_sum += i
     for i in even_digits:
-        sum += i
+        total_sum += i
     return sum[-1]
 if re.match(input, amex_regex):
     print("AMEX")
