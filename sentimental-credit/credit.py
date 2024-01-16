@@ -13,6 +13,7 @@ def check_luhn(card_number):
     odd_digits = digits[-2::-2]
     even_digits = digits[-1::-2]
     for i in odd_digits:
+        sum = 0
         doubled = i * 2
         if doubled >= 10:
             doubled = str(doubled)
