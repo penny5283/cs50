@@ -6,5 +6,7 @@ while h <= 0 or h > 8:
 
 for i in range(1, h+1):
     for j in range(h-i):
+        print(" ")
+    for k in range(i):
         print("#")
-print()
+    print()
