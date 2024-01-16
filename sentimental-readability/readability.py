@@ -36,7 +36,7 @@ def cal_index(text):
     L = count_l / count_w * 100
     S = count_s / count_w * 100
     index = 0.0588 * L - 0.296 * S - 15.8
-    return index
+
 
 
 
