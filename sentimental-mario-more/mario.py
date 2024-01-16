@@ -1,0 +1,10 @@
+# TODO
+from cs50 import get_int
+while h <= 0 or h > 8:
+    h = get_int("Height:")
+for i in range(h):
+    for j in range(h-i):
+        print("")
+    for p in range(1,h+1):
+        print("#" + "  " + "#", end = "")
+print()
