@@ -33,8 +33,8 @@ count_s = check_sentences(txt)
 
 
 index = 0
-L = count_l / count_w * 100
-S = count_s / count_w * 100
+L = (count_l / count_w) * 100
+S = (count_s / count_w) * 100
 index = 0.0588 * L - 0.296 * S - 15.8
 
 if index < 1:
