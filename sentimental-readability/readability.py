@@ -4,5 +4,5 @@ txt = get_string("Text: ")
 def check_letters(text):
     count_l = 0
     for i in text:
-        if isalpha
+        if i.isalpha
 
