@@ -6,6 +6,6 @@ def check_letters(text):
     for i in text:
         i = text[]
         if i.isalpha():
-            count += 1
+            count_l += 1
 
 
