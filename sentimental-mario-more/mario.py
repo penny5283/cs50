@@ -7,5 +7,5 @@ for i in range(1, h):
     for j in range(h-i):
         print(" ", end = "")
     for p in range(i):
-        print("#" + "  " + "#")
+        print("#")
 print()
