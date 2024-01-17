@@ -13,7 +13,7 @@ def main():
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         database = list(reader)
-        print(database)
+
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as file:
         sequence = file.read()
@@ -26,11 +26,10 @@ def main():
             print(str_counts)
     # TODO: Check database for matching profiles
     for person in database:
-        if all(person[str] == str(str_counts[str]) for str in str_counts):
-            print(person['name'])
-            return
-    print("No match")
-
+        if all(person[str] == str(str_counts[str])):
+            print("{}".format(person["name"]))
+        else:
+            print("No match")
     return
 
 
