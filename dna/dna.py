@@ -25,7 +25,7 @@ def main():
         sequence_r = csv.reader(s)
         gene = next(sequence_r)
         gene_str = "".join(gene)
-
+        
     # TODO: Find longest match of each STR in DNA sequence
     longest_runs = {}
     longest_run = 0
@@ -33,7 +33,7 @@ def main():
         longest_run = longest_match(gene_str, pattern)
         longest_runs[pattern] = longest_run
     # TODO: Check database for matching profiles
-    
+
     return
 
 
