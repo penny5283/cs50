@@ -21,7 +21,7 @@ def main():
         gene_str = "".join(gene)
         print(gene_str)
     # TODO: Find longest match of each STR in DNA sequence
-    str_patterns = 
+    str_patterns = ["AGATC","TTTTTTCT","AATG","TCTAG","GATA","TATC","GAAA","TCTG"]
     for
     # TODO: Check database for matching profiles
 
