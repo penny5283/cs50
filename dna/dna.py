@@ -30,7 +30,7 @@ def main():
         longest_run = longest_match(gene_str, pattern)
         longest_runs[pattern] = longest_run
     # TODO: Check database for matching profiles
-    f
+    
     return
 
 
