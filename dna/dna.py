@@ -25,12 +25,14 @@ def main():
         sequence_r = csv.reader(s)
         gene = next(sequence_r)
         gene_str = "".join(gene)
-        print(gene_str)
-    # TODO: Find longest match of each STR in DNA sequence
-    for i in str_patterns:
-        
-    # TODO: Check database for matching profiles
 
+    # TODO: Find longest match of each STR in DNA sequence
+    longest_run = 0
+    for i in str_patterns:
+        longest_run = longest_match(gene_str, i)
+
+    # TODO: Check database for matching profiles
+    
     return
 
 
