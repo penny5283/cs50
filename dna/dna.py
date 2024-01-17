@@ -16,7 +16,7 @@ def main():
         database_r = csv.DictReader(d)
         for row in database_r:
             profiles.append(row)
-
+        print(profiles)
     # TODO: Read DNA sequence file into a variable
     sequence = sys.argv[2]
     with open(sequence, mode='r') as s:
@@ -30,7 +30,7 @@ def main():
         longest_run = longest_match(gene_str, pattern)
         longest_runs[pattern] = longest_run
     # TODO: Check database for matching profiles
-    
+
     return
 
 
