@@ -12,7 +12,9 @@ def main():
     database = sys.argv[2]
     with open(database, mode = 'r') as d:
         reader  = csv.reader(d)
-        print(reader)
+    for row in reader:
+
+        print(row)
 
     # TODO: Read DNA sequence file into a variable
 
