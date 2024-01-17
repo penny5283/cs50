@@ -18,9 +18,9 @@ def main():
     with open(sequence, mode = 'r') as s:
         sequence_r = csv.reader(s)
         gene = next(sequence_r)
+        print(gene)
     # TODO: Find longest match of each STR in DNA sequence
-    for i in range(len(gene)-1):
-        gene[]
+
     # TODO: Check database for matching profiles
 
     return
