@@ -25,7 +25,11 @@ def main():
             str_counts = {str: longest_match(sequence, str)}
     # TODO: Check database for matching profiles
     for person in database:
-        if is
+        if all(person[str] == str(str_counts[str]) for str in str_counts):
+            print(person['name'])
+            return
+    print("No match")
+
     return
 
 
