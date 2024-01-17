@@ -18,7 +18,6 @@ def main():
             profiles.append(row)
 
     # TODO: Read DNA sequence file into a variable
-    # TODO: Read DNA sequence file into a variable
     sequence = sys.argv[2]
     with open(sequence, mode='r') as s:
         gene_str = s.read()
@@ -30,8 +29,8 @@ def main():
     for pattern in str_patterns:
         longest_run = longest_match(gene_str, pattern)
         longest_runs[pattern] = longest_run
-    # TODO: Check database for matching profiles  
-
+    # TODO: Check database for matching profiles
+    f
     return
 
 
