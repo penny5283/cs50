@@ -27,7 +27,7 @@ def main():
         gene_str = "".join(gene)
         print(gene_str)
     # TODO: Find longest match of each STR in DNA sequence
-    d
+    
     # TODO: Check database for matching profiles
 
     return
