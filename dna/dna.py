@@ -12,7 +12,7 @@ def main():
     database = sys.argv[1]
 
     with open(database, mode = 'r') as d:
-        reader  = csv.reader(d)
+        reader = csv.DictReader(d)
         for row in reader:
 
             print(row)
