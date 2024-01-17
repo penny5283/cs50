@@ -17,9 +17,10 @@ def main():
     sequence = sys.argv[2]
     with open(sequence, mode = 'r') as s:
         sequence_r = csv.DictReader(s)
-
+        gene = next(sequence_r)
     # TODO: Find longest match of each STR in DNA sequence
-    for i in range(len(s))
+    for i in range(len(gene)-1):
+        gene[]
     # TODO: Check database for matching profiles
 
     return
