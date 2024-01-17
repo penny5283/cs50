@@ -18,7 +18,8 @@ def main():
     with open(sequence, mode = 'r') as s:
         sequence_r = csv.reader(s)
         gene = next(sequence_r)
-        print(gene)
+        gene_str = str(gene)
+        print(gene_str)
     # TODO: Find longest match of each STR in DNA sequence
 
     # TODO: Check database for matching profiles
