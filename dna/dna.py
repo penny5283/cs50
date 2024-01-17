@@ -13,7 +13,7 @@ def main():
     with open(sys.argv[1], "r") as file:
         reader = csv.DictReader(file)
         database = list(reader)
-
+        print(database)
     # TODO: Read DNA sequence file into a variable
     with open(sys.argv[2], "r") as file:
         sequence = file.read()
