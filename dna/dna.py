@@ -18,11 +18,11 @@ def main():
             profiles.append(row)
 
     # TODO: Read DNA sequence file into a variable
+    # TODO: Read DNA sequence file into a variable
     sequence = sys.argv[2]
-    with open(sequence, mode = 'r') as s:
-        sequence_r = csv.reader(s)
-        gene = next(sequence_r)
-        gene_str = "".join(gene)
+    with open(sequence, mode='r') as s:
+        gene_str = s.read()
+
 
     # TODO: Find longest match of each STR in DNA sequence
     longest_runs = {}
