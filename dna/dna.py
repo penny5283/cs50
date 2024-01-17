@@ -25,7 +25,8 @@ def main():
     matched = {}
     for pattern in str_patterns:
         window_size = len(pattern)
-        
+        for i in range()
+
     # TODO: Check database for matching profiles
 
     return
