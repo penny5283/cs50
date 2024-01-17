@@ -10,9 +10,15 @@ def main():
 
     # TODO: Read database file into a variable
     database = sys.argv[1]
+    str_patterns = []
     with open(database, mode = 'r') as d:
-        database_r = csv.DictReader(d)
-
+        database_r = csv.reader(d)
+        for row in database_r:
+            header = row
+            break
+        for i in header:
+            if i != "name":
+                str_patterns.append(i)
     # TODO: Read DNA sequence file into a variable
     sequence = sys.argv[2]
     with open(sequence, mode = 'r') as s:
@@ -21,8 +27,7 @@ def main():
         gene_str = "".join(gene)
         print(gene_str)
     # TODO: Find longest match of each STR in DNA sequence
-    
-
+    d
     # TODO: Check database for matching profiles
 
     return
