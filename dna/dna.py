@@ -23,7 +23,7 @@ def main():
     for str in database[0].keys():
         if str != "name":
             str_counts = {str: longest_match(sequence, str)}
-            print(str_counts)
+    print(str_counts)
     # TODO: Check database for matching profiles
     # Loop through each person in the database
     for person in database:
