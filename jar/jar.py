@@ -32,6 +32,7 @@ class Jar:
 def main():
     jar = Jar()
     jar.deposit(4)
+    jar.withdraw(2)
     print(str(jar))
 
 main()
