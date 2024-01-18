@@ -27,7 +27,8 @@ def main():
     # TODO: Check database for matching profiles
     for person in database:
         flag = true
-        for str in 
+        for str in str_counts:
+            database_str_counts = 
     return
 
 
