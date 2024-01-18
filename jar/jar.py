@@ -16,7 +16,7 @@ class Jar:
             return self.cookies
 
     def withdraw(self, n):
-        if n - self.cookies >= 0:
+        if self.cookies - n >= 0:
             self.cookies -= n
         else:
             raise ValueError("Do not have enough cookies")
