@@ -20,23 +20,34 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
-    for str in database[0].keys():
-        if str != "name":
-            str_counts = {str: longest_match(sequence, str)}
-            print(str_counts)
-    # TODO: Check database for matching profiles
-    for person in database:
-        flag = True
-        for str in str_counts:
-            database_str_counts = int(person[str])
-            sequence_str_counts = str_counts[str]
-            if database_str_counts != sequence_str_counts:
-                flag = False
-                break
-        if flag = True:
-            print(person["name"])
-    print("No match")
-    return
+# Loop through each person in the database
+for person in database:
+
+    # Assume this person is a match until proven otherwise
+    is_match = True
+
+    # Check each STR count against the DNA sequence's counts
+    for str in str_counts:
+        # Convert the STR count from the database (which is a string) to an integer
+        database_str_count = int(person[str])
+
+        # Get the STR count from the DNA sequence
+        sequence_str_count = str_counts[str]
+
+        # If any STR count doesn't match, set is_match to False and break out of this inner loop
+        if database_str_count != sequence_str_count:
+            is_match = False
+            break
+
+    # If, after checking all STRs, is_match is still True, print the person's name
+    if is_match:
+        print(person['name'])
+        # Exit the function after finding a match
+        return
+
+# If the loop completes without finding a match, print "No match"
+print("No match")
+
 
 
 def longest_match(sequence, subsequence):
