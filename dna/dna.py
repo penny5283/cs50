@@ -20,34 +20,38 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
-# Loop through each person in the database
-for person in database:
+    for str in database[0].keys():
+        if str != "name":
+            str_counts = {str: longest_match(sequence, str)}
 
-    # Assume this person is a match until proven otherwise
-    is_match = True
+    # TODO: Check database for matching profiles
+    # Loop through each person in the database
+    for person in database:
 
-    # Check each STR count against the DNA sequence's counts
-    for str in str_counts:
-        # Convert the STR count from the database (which is a string) to an integer
-        database_str_count = int(person[str])
+        # Assume this person is a match until proven otherwise
+        is_match = True
 
-        # Get the STR count from the DNA sequence
-        sequence_str_count = str_counts[str]
+        # Check each STR count against the DNA sequence's counts
+        for str in str_counts:
+            # Convert the STR count from the database (which is a string) to an integer
+            database_str_count = int(person[str])
 
-        # If any STR count doesn't match, set is_match to False and break out of this inner loop
-        if database_str_count != sequence_str_count:
-            is_match = False
-            break
+            # Get the STR count from the DNA sequence
+            sequence_str_count = str_counts[str]
 
-    # If, after checking all STRs, is_match is still True, print the person's name
-    if is_match:
-        print(person['name'])
-        # Exit the function after finding a match
-        return
+            # If any STR count doesn't match, set is_match to False and break out of this inner loop
+            if database_str_count != sequence_str_count:
+                is_match = False
+                break
 
-# If the loop completes without finding a match, print "No match"
-print("No match")
+        # If, after checking all STRs, is_match is still True, print the person's name
+        if is_match:
+            print(person['name'])
+            # Exit the function after finding a match
+            return
 
+    # If the loop completes without finding a match, print "No match"
+    print("No match")
 
 
 def longest_match(sequence, subsequence):
