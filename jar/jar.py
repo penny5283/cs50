@@ -29,4 +29,8 @@ class Jar:
         return self.cookies
 
 def main():
+    jar = Jar()
+    print(str(jar.capacity))
+
+main()
 
