@@ -26,11 +26,8 @@ def main():
             print(str_counts)
     # TODO: Check database for matching profiles
     for person in database:
-        for str in str_counts:
-            if all(person[str] == str(str_counts[str])):
-                print("{}".format(person["name"]))
-            else:
-                print("No match")
+        flag = true
+        for str in 
     return
 
 
