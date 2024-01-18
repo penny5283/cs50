@@ -26,9 +26,16 @@ def main():
             print(str_counts)
     # TODO: Check database for matching profiles
     for person in database:
-        flag = true
+        flag = True
         for str in str_counts:
-            database_str_counts = 
+            database_str_counts = int(person[str])
+            sequence_str_counts = str_counts[str]
+            if database_str_counts != sequence_str_counts:
+                flag = False
+                break
+        if flag = True:
+            print(person["name"])
+    print("No match")
     return
 
 
