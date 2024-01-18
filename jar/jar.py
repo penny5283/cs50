@@ -28,5 +28,5 @@ class Jar:
     def size(self):
         return self.cookies
 
-    def main():
-        
+def main():
+
