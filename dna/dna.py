@@ -28,7 +28,7 @@ def main():
     for person in database:
         flag = true
         for str in str_counts:
-            database_str_counts = 
+            database_str_counts = d
     return
 
 
