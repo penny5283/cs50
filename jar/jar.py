@@ -13,7 +13,7 @@ class Jar:
             raise ValueError("Exceed capacity")
         else:
             self.cookies += n
-            return self.cookies
+            return 
 
     def withdraw(self, n):
         if self.cookies - n >= 0:
