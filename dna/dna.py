@@ -18,14 +18,11 @@ def main():
     with open(sys.argv[2], "r") as file:
         sequence = file.read()
 
-
     # TODO: Find longest match of each STR in DNA sequence
-    current_count = {}
     sequence_counts = {}
     for str in database[0].keys():
         if str != "name":
-            current_count = {str: longest_match(sequence, str)}
-            sequence_counts.update(current_count)
+            sequence_counts.update({str: longest_match(sequence, str)})
 
     # TODO: Check database for matching profiles
     # Loop through each person in the database
