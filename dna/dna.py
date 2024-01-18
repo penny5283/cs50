@@ -20,10 +20,13 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
+    current_count = {}
+    sequence_counts = {}
     for str in database[0].keys():
         if str != "name":
-            str_counts = {str: longest_match(sequence, str)}
-    print(str_counts)
+            current_count = {str: longest_match(sequence, str)}
+            sequence_counts.update(current_count)
+
     # TODO: Check database for matching profiles
     # Loop through each person in the database
     for person in database:
@@ -32,12 +35,12 @@ def main():
         is_match = True
 
         # Check each STR count against the DNA sequence's counts
-        for str in str_counts:
+        for str in sequence_counts:
             # Convert the STR count from the database (which is a string) to an integer
             database_str_count = int(person[str])
 
             # Get the STR count from the DNA sequence
-            sequence_str_count = str_counts[str]
+            sequence_str_count = sequence_counts[str]
 
             # If any STR count doesn't match, set is_match to False and break out of this inner loop
             if database_str_count != sequence_str_count:
