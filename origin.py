@@ -1,6 +1,6 @@
-
+import csv
 import requests
-import pandas as pd
+
 
 def main():
     # Read NYTimes Covid Database
@@ -8,11 +8,8 @@ def main():
         "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
     )
     decoded_content = download.content.decode("utf-8")
-    # print(decoded_content)
     file = decoded_content.splitlines()
-    # print(type(decoded_content))
-    # reader = pd.read_csv(decoded_content)
-    return
+    reader = csv.DictReader(file)
 
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
@@ -22,12 +19,12 @@ def main():
     print("Choose one or more states to view average COVID cases.")
     print("Press enter when done.\n")
 
-    # while True:
-    #     state = input("State: ")
-    #     if state in new_cases:
-    #         states.append(state)
-    #     if len(state) == 0:
-    #         break
+    while True:
+        state = input("State: ")
+        if state in new_cases:
+            states.append(state)
+        if len(state) == 0:
+            break
 
     print(f"\nSeven-Day Averages")
 
