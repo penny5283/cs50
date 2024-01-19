@@ -41,22 +41,8 @@ def calculate(reader):
 
     #group by state
     grouped = reader.groupby('state')
+    
 
-    #initialize dict
-    dict_last_day = {}
-    dict_previous_day = {}
-
-    #iterate the subdataframe to get the last 14 days' data by state
-    for state, group in grouped:
-        if len(group) >= 14:
-            last_two_rows = group.tail(14)
-
-            #store last two days' data into each dictionary by key which is state
-            dict_last_day[state] = last_two_rows.iloc[-1]['cases']
-            dict_previous_day[state] = last_two_rows.iloc[-2]['cases']
-
-    #calculate the difference between two dictionaries
-    new_cases = {state:dict_last_day[state] - dict_previous_day[state]}
 
     return new_cases
 # # TODO: Calculate and print out seven day average for given state
