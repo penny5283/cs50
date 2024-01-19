@@ -36,6 +36,7 @@ def main():
 
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
+    #sort the dataframe by 
     sorted_reader = reader.sort_values(by=['state', 'date'])
 
 
