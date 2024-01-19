@@ -46,10 +46,10 @@ def calculate(reader):
     dict_last_day = {}
     dict_previous_day = {}
 
-    #iterate the subdataframe to get the last two days' data by state
+    #iterate the subdataframe to get the last 14 days' data by state
     for state, group in grouped:
-        if len(group) >= 2:
-            last_two_rows = group.tail(2)
+        if len(group) >= 14:
+            last_two_rows = group.tail(14)
 
             #store last two days' data into each dictionary by key which is state
             dict_last_day[state] = last_two_rows.iloc[-1]['cases']
