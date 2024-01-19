@@ -41,8 +41,13 @@ def calculate(reader):
 
     #group by state
     grouped = reader.groupby('state')
-    dict_last_day = 
 
+    #initialize dict
+    dict_last_day = {}
+    dict_previous_day = {}
+
+    #store values to each dict
+    
 # # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
     ...
