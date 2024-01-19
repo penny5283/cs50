@@ -55,7 +55,10 @@ def calculate(reader):
             dict_last_day[state] = last_two_rows.iloc[-1]['cases']
             dict_previous_day[state] = last_two_rows.iloc[-2]['cases']
 
-            
+    #calculate the difference between two dictionaries
+    new_cases = {state:dict_last_day[state] - dict_previous_day[state]}
+
+    return new_cases
 # # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
     ...
