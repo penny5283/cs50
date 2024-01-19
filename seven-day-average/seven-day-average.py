@@ -36,7 +36,7 @@ def main():
 def calculate(reader):
     new_cases = {}
     previous_cases = {}
-    for keys in 
+    
     return new_cases
 
 
