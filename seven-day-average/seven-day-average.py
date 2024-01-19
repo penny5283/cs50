@@ -10,7 +10,7 @@ def main():
     decoded_content = download.content.decode("utf-8")
     file = decoded_content.splitlines()
     reader = pd.read_csv(file)
-    print(reader)
+
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
 
@@ -34,12 +34,7 @@ def main():
 
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
-    new_cases = {}
-    previous_cases = {}
-    for each_day in reader:
-        previous_cases = {each_day['state']:each_day['cases']}
-        new_cases = {each_day}
-    return new_cases
+   
 
 
 # TODO: Calculate and print out seven day average for given state
