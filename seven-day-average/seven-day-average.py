@@ -1,6 +1,8 @@
 
 import requests
 import pandas as pd
+from io import StringIO
+
 
 def main():
     # Read NYTimes Covid Database
@@ -8,11 +10,8 @@ def main():
         "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
     )
     decoded_content = download.content.decode("utf-8")
-    print(decoded_content)
-    file = decoded_content.splitlines()
-    # print(type(decoded_content))
-    # reader = pd.read_csv(decoded_content)
-    return
+    str_data = StringIO(decoded_content)
+    reader = pd.read_csv(str_data)
 
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
