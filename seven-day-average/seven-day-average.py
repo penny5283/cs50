@@ -38,7 +38,7 @@ def calculate(reader):
     previous_cases = {}
     for each_day in reader:
         previous_cases = {each_day['state']:each_day['cases']}
-        n
+        new_cases = {each_day}
     return new_cases
 
 
