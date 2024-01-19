@@ -36,7 +36,8 @@ def main():
 def calculate(reader):
     new_cases = {}
     previous_cases = {}
-    
+    for row in reader:
+        new_cases = {}
     return new_cases
 
 
