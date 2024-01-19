@@ -36,9 +36,11 @@ def main():
 
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
-    #sort the dataframe by 
-    sorted_reader = reader.sort_values(by=['state', 'date'])
+    #sort the dataframe by
+    sorted_reader = reader.sort_values(by=['state', 'date'], inplace = True)
 
+    #group by state
+    grouped = 
 
 # # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
