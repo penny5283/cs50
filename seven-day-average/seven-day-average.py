@@ -8,8 +8,7 @@ def main():
         "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
     )
     decoded_content = download.content.decode("utf-8")
-    file = decoded_content.splitlines()
-    print(file)
+    print(type(decoded_content))
     #reader = pd.read_csv(file)
 
     # Construct 14 day lists of new cases for each states
