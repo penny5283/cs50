@@ -8,7 +8,7 @@ def main():
         "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-states.csv"
     )
     decoded_content = download.content.decode("utf-8")
-    # print(decoded_content)
+    print(decoded_content)
     file = decoded_content.splitlines()
     # print(type(decoded_content))
     # reader = pd.read_csv(decoded_content)
