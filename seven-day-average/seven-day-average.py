@@ -51,8 +51,11 @@ def calculate(reader):
         if len(group) >= 2:
             last_two_rows = group.tail(2)
 
-            #store last two days' data into each dictionary
-            dict_last_day = {}
+            #store last two days' data into each dictionary by key which is state
+            dict_last_day[state] = last_two_rows.iloc[-1]['cases']
+            dict_previous_day[state] = last_two_rows.iloc[-2]['cases']
+
+            
 # # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
     ...
