@@ -9,7 +9,7 @@ def main():
     )
     decoded_content = download.content.decode("utf-8")
     print(type(decoded_content))
-    #reader = pd.read_csv(file)
+    reader = pd.read_csv(decoded_content)
 
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
