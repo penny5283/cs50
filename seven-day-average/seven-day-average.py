@@ -12,7 +12,7 @@ def main():
     decoded_content = download.content.decode("utf-8")
     str_data = StringIO(decoded_content)
     reader = pd.read_csv(str_data)
-
+    print(type(reader))
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
 
@@ -36,6 +36,7 @@ def main():
 
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
+    sorted_reader = reader.sort_values(by=['state', 'date'])
     
 
 
