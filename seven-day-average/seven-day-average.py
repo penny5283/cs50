@@ -1,6 +1,6 @@
 import csv
 import requests
-
+import pandas as pd
 
 def main():
     # Read NYTimes Covid Database
