@@ -46,8 +46,13 @@ def calculate(reader):
     dict_last_day = {}
     dict_previous_day = {}
 
-    #store values to each dict
-    
+    #iterate the subdataframe to get the last two days' data by state
+    for state, group in grouped:
+        if len(group) >= 2:
+            last_two_rows = group.tail(2)
+
+            #store last two days' data into each dictionary
+            dict_last_day = {}
 # # TODO: Calculate and print out seven day average for given state
 def comparative_averages(new_cases, states):
     ...
