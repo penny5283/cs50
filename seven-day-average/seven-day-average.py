@@ -73,9 +73,11 @@ def comparative_averages(new_cases, states):
             if state in new_cases and len(new_cases[state]) >=14:
                 average_this_week = sum(new_cases[state][7::])/7
                 average_last_week = sum(new_cases[state][:7])/7
-            growth = (average_this_week - average_last_week)/average_last_week
+                growth = (average_this_week - average_last_week)/average_last_week
+                print(f"{state} had a 7-day average of {average_this_week.2f} cases and increase of {growth:.2f}")
+            else:
+                print(f"Not enough data for {state}")
         except:
-            return ZeroDivisionError:
-    print("{} had a 7-day average of {} and an increase of {}.".format(states, average_this_week, growth))
-    return
+            ZeroDivisionError:
+            print(f"Data error for {state} - division by zero.")
 main()
