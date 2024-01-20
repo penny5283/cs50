@@ -48,8 +48,20 @@ def calculate(reader):
     for index, row in reader.iterrows():
         state = row['state']
         cases_today = row['cases']
-        
 
+        if state not in previous_cases:
+            previous_cases[state] = cases_today
+            new_cases[state] = []
+            continue
+
+    #calculate the new cases
+    new_cases_today = cases_today - previous_cases[state]
+    previous_cases[state] = cases_today
+
+    #maintain 14-day
+    if len(new_cases[state]) = 14:
+        new_cases[state].pop(0)
+    else
 
 
     return new_cases
