@@ -53,10 +53,10 @@ def calculate(reader):
             previous_cases[state] = cases_today
             new_cases[state] = []
             continue
+        else:
 
-    #calculate the new cases
-    new_cases_today = cases_today - previous_cases[state]
-    previous_cases[state] = cases_today
+            new_cases_today = cases_today - previous_cases[state]
+            previous_cases[state] = cases_today
 
     #maintain 14-day
     if len(new_cases[state]) >= 14:
