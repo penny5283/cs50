@@ -41,7 +41,14 @@ def calculate(reader):
 
     #group by state
     grouped = reader.groupby('state')
-    
+
+    new_cases = {}
+    previous_cases = {}
+
+    for index, row in reader.iterrows():
+        state = row['state']
+        cases_today = row['cases']
+        print(state, cases_today)
 
 
     return new_cases
