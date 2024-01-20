@@ -71,8 +71,8 @@ def comparative_averages(new_cases, states):
     for state in states:
         try:
             if state in new_cases and len(new_cases[state]) >=14:
-            average_this_week = sum(new_cases[state][7::])/7
-            average_last_week = sum(new_cases[state][::7])/7
+                average_this_week = sum(new_cases[state][7::])/7
+                average_last_week = sum(new_cases[state][:7])/7
             growth = (average_this_week - average_last_week)/average_last_week
         except:
             return ZeroDivisionError:
