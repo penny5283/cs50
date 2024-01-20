@@ -12,7 +12,7 @@ def main():
     decoded_content = download.content.decode("utf-8")
     str_data = StringIO(decoded_content)
     reader = pd.read_csv(str_data)
-    print(type(reader))
+
     # Construct 14 day lists of new cases for each states
     new_cases = calculate(reader)
 
@@ -74,10 +74,9 @@ def comparative_averages(new_cases, states):
                 average_this_week = sum(new_cases[state][7::])/7
                 average_last_week = sum(new_cases[state][:7])/7
                 growth = (average_this_week - average_last_week)/average_last_week
-                print(f"{state} had a 7-day average of {average_this_week.2f} cases and increase of {growth:.2f}")
+                print(f"{state} had a 7-day average of {average_this_week:.2f} cases and increase of {growth:.2f}")
             else:
                 print(f"Not enough data for {state}")
-        except:
-            ZeroDivisionError:
+        except ZeroDivisionError:
             print(f"Data error for {state} - division by zero.")
 main()
