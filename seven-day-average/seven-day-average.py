@@ -61,7 +61,10 @@ def calculate(reader):
     #maintain 14-day
     if len(new_cases[state]) = 14:
         new_cases[state].pop(0)
-    else
+    else:
+        new_cases[state].append(new_cases_today)
+
+    return new_cases
 
 
     return new_cases
