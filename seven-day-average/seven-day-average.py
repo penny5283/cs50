@@ -48,6 +48,7 @@ def calculate(reader):
     for index, row in reader.iterrows():
         state = row['state']
         cases_today = row['cases']
+        
 
 
 
