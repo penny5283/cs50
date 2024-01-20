@@ -22,7 +22,7 @@ def main():
     print("Press enter when done.\n")
 
     while True:
-        state = input("State: ")
+        state = input("State: ").strip()
         if state in new_cases:
             states.append(state)
         if len(state) == 0:
