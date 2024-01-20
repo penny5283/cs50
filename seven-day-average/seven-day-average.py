@@ -36,12 +36,7 @@ def main():
 
 # TODO: Create a dictionary to store 14 most recent days of new cases by state
 def calculate(reader):
-    #sort the dataframe by
-    sorted_reader = reader.sort_values(by=['state', 'date'], inplace = True)
-
-    #group by state
-    grouped = reader.groupby('state')
-
+    reader.sort_values(by=['state', 'date'], inplace=True)
     new_cases = {}
     previous_cases = {}
 
@@ -53,14 +48,13 @@ def calculate(reader):
             previous_cases[state] = cases_today
             new_cases[state] = []
             continue
-        else:
 
-            new_cases_today = cases_today - previous_cases[state]
-            previous_cases[state] = cases_today
+        new_cases_today = cases_today - previous_cases[state]
+        previous_cases[state] = cases_today
 
-    #maintain 14-day
-        while len(new_cases) < 14:
-            
+        if len(new_cases[state]) >= 14:
+            new_cases[state].pop(0)
+        new_cases[state].append(new_cases_today)
 
     return new_cases
 
