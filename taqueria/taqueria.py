@@ -10,6 +10,15 @@ menu = {
     "Tortilla Salad": 8.00
 }
 def main(item,price):
+    total_price = 0
     try:
-        item = input("Item:/n")
+        item = (input("Item:/n")).title()
+        for key in menu:
+            if key == item:
+                total_price += int(menu[key])
+            else:
+                print("Not in the menu")
+        print(f"Total: ${total_price:.2f}")
     except EOFerror:
+
+main()
