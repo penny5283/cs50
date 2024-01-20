@@ -12,4 +12,4 @@ menu = {
 def main(item,price):
     try:
         item = input("Item:/n")
-        
+    except EOFerror:
