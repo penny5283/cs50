@@ -9,10 +9,10 @@ menu = {
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
-def main(item,pric):
+def main():
     total_price = 0
     try:
-        item = (input("Item:/n")).title()
+        item = (input("Item:\n")).title()
         for key in menu:
             if key == item:
                 total_price += int(menu[key])
