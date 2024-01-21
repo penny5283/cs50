@@ -9,7 +9,7 @@ menu = {
     "Taco": 3.00,
     "Tortilla Salad": 8.00
 }
-def main(item,price):
+def main(item,pric):
     total_price = 0
     try:
         item = (input("Item:/n")).title()
