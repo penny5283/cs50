@@ -41,7 +41,7 @@ def calculate(reader):
     previous_cases = {}
 
     for index, row in reader.iterrows():
-        state = row['state']
+                                                                                                                                                                                                                                                                                                                                        state = row['state']
         cases_today = row['cases']
 
         if state not in previous_cases:
