@@ -1,0 +1,2 @@
+for the first question, I would look at the average energy, valence, and danceability of each song, and times each song's percentage weight.
+for the second quesiont, because it depends on each person's listening habit. if someone listen a single song or a single kinded song repeatedly, but there is one song this person only listened once, but still count as the top 100, it will interfere the average since this song is significantly different from the song this person listened most.
