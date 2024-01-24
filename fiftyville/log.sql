@@ -21,7 +21,7 @@ AND transcript LIKE '%bakery%';
 -- 162 Eugene saw thief at emma's bakery ATM on leggett Street withdraw
 -- 163 Raymond heard earliest flight out of Fiftyville tomorrow
 SELECT id, account_number, amount FROM atm_transactions
-WHERE year = 2021 AND month = 7 AND day = 28
+WHERE year = 2021 AND month = 7 AND day = 28 
 AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw';
 SELECT id, license_plate FROM bakery_security_logs
