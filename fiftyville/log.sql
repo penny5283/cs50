@@ -14,5 +14,5 @@ AND description LIKE 'Theft%';
 -- place->Humphrey Street bakery
 -- 3 witnesses mentioned the bakery
 -- filter inerview of witnesses
-SELECT name, transcript FROM interviews
-WHERE id = 295;
+SELECT id, name, transcript FROM interviews
+WHERE year = 2021 AND month = 7 AND day = 28;
