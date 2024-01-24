@@ -10,4 +10,6 @@ WHERE year = 2021 AND month = 7 AND day = 28
 AND street = 'Humphrey Street'
 AND description LIKE 'Theft%';
 --get the id->295
---
+--time->10:15am
+--place->Humphrey Street bakery
+
