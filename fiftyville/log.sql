@@ -61,4 +61,6 @@ FROM passengers
 WHERE flight_id = 36
 AND (passport_number = 5773159633 OR passport_number = 3592750733);
 -- !!! our thief = Bruce!!
-
+SELECT city FROM airports
+JOIN flights ON airports.id = flights.destination_airport_id
+WHERE flights.id = 36;
