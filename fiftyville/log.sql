@@ -61,6 +61,13 @@ FROM passengers
 WHERE flight_id = 36
 AND (passport_number = 5773159633 OR passport_number = 3592750733);
 -- !!! our thief = Bruce!!
+-- destination
 SELECT city FROM airports
 JOIN flights ON airports.id = flights.destination_airport_id
 WHERE flights.id = 36;
+-- accomplice
+SELECT name FROM people
+JOIN phone_calls ON people.phone_number = phone_calls.receiver
+WHERE phone_calls.caller = (SELECT people.phone_number WHERE passport_number = 5773159633);
+
+
