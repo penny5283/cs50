@@ -68,6 +68,8 @@ WHERE flights.id = 36;
 -- accomplice
 SELECT name FROM people
 JOIN phone_calls ON people.phone_number = phone_calls.receiver
-WHERE phone_calls.caller = (SELECT people.phone_number WHERE people.passport_number = 5773159633);
+WHERE phone_calls.caller = (SELECT people.phone_number FROM people WHERE people.passport_number = 5773159633)
+AND phone_calls.year = 2021 AND phone_calls.month = 7 AND phone_calls.day = 28
+AND phone_calls.duration <= 60;
 
 
