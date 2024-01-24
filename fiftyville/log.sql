@@ -4,5 +4,8 @@
 --what kind of description it provided
 SELECT * FROM crime_scene_reports;
 --it seems that description include the type of crime committed
---filter all the th
+--filter all the the theft happened on july 28,2021 and on that place
+SELECT id FROM crime_scene_reports
+WHERE year = 2021 AND month = 7 AND day = 28
+AND street = 'Humphrey Street'
 
