@@ -35,6 +35,7 @@ AND activity = 'exit';
 SELECT people.id, people.name, people.passport_number FROM people
 JOIN phone_calls ON people.phone_number = phone_calls.caller
 JOIN bank_accounts ON people.id = bank_accounts.person_id
+JOIN airports ON people.name = ai
 WHERE phone_calls.year = 2021 AND month = 7 AND day = 28
 AND duration <= 60 AND people.license_plate IN (SELECT license_plate FROM bakery_security_logs
 WHERE year = 2021 AND month = 7 AND day = 28
