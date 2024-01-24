@@ -45,3 +45,9 @@ AND bank_accounts.account_number IN (SELECT account_number FROM atm_transactions
 WHERE year = 2021 AND month = 7 AND day = 28
 AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw');
+--try flights
+SELECT flights.id FROM flights
+JOIN airports ON flights.
+WHERE year = 2021 AND month = 7 AND day = 29
+ORDER BY hour
+
