@@ -56,7 +56,9 @@ WHERE year = 2021 AND month = 7 AND day = 29
 AND airports.city = 'Fiftyville'
 ORDER BY hour;
 --earliest flight_id = 36
-SELECT passport_number, seat FROM passengers
+SELECT passport_number, seat
+FROM passengers
 WHERE flight_id = 36
-AND passport_number = 5773159633 or 3592750733;
+AND (passport_number = 5773159633 OR passport_number = 3592750733);
+-- !!! our thief = Bruce!!
 
