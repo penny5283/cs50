@@ -15,4 +15,7 @@ AND description LIKE 'Theft%';
 -- 3 witnesses mentioned the bakery
 -- filter inerview of witnesses
 SELECT id, name, transcript FROM interviews
-WHERE year = 2021 AND month = 7 AND day = 28;
+WHERE year = 2021 AND month = 7 AND day = 28
+AND transcript LIKE '%bakery%';
+-- 161 Ruth security footage from bakery parking lot car left!
+-- 162 Eugene 
