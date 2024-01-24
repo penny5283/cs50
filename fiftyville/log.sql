@@ -45,6 +45,10 @@ AND bank_accounts.account_number IN (SELECT account_number FROM atm_transactions
 WHERE year = 2021 AND month = 7 AND day = 28
 AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw');
+-- |   id   | name  | passport_number |
++--------+-------+-----------------+
+| 686048 | Bruce | 5773159633      |
+| 514354 | Diana | 3592750733
 --try flights
 SELECT flights.id FROM flights
 JOIN airports ON flights.origin_airport_id = airports.id
@@ -52,19 +56,7 @@ WHERE year = 2021 AND month = 7 AND day = 29
 AND airports.city = 'Fiftyville'
 ORDER BY hour;
 --earliest flight_id = 36
-SELECT people.id, people.name, people.passport_number FROM people
-JOIN phone_calls ON people.phone_number = phone_calls.caller
-JOIN bank_accounts ON people.id = bank_accounts.person_id
-JOIN airports ON people.name = ai
-JOIN flights ON airports.id = flights.origin_airport_id
-JOIN passengers ON flights.id = passengers.flight_id
-WHERE phone_calls.year = 2021 AND month = 7 AND day = 28
-AND duration <= 60 AND people.license_plate IN (SELECT license_plate FROM bakery_security_logs
-WHERE year = 2021 AND month = 7 AND day = 28
-AND hour = 10 AND minute > 15 AND minute < 25
-AND activity = 'exit')
-AND bank_accounts.account_number IN (SELECT account_number FROM atm_transactions
-WHERE year = 2021 AND month = 7 AND day = 28
-AND atm_location = 'Leggett Street'
-AND transaction_type = 'withdraw')
-AND flights.id = 36;
+SELECT passport_number, seat FROM passengers
+WHERE flight_id = 36
+AND passport_number = 5773159633 or 3592750733;
+
