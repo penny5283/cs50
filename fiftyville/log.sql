@@ -2,6 +2,7 @@
 -- first using schema
 .schema
 --what kind of description it provided
-SELECT * FROM crime_scene_reports
-
+SELECT * FROM crime_scene_reports;
+--it seems that description include the type of crime committed
+--filter all the th
 
