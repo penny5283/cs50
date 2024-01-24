@@ -47,7 +47,8 @@ AND atm_location = 'Leggett Street'
 AND transaction_type = 'withdraw');
 --try flights
 SELECT flights.id FROM flights
-JOIN airports ON flights.
+JOIN airports ON flights.origin_airport_id = airports.id
 WHERE year = 2021 AND month = 7 AND day = 29
-ORDER BY hour
+AND airports.city = 'Fiftyville'
+ORDER BY hour;
 
