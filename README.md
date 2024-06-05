@@ -1,3 +1,6 @@
+![Language](https://img.shields.io/badge/language-Python%20/%20C-orange.svg)&nbsp;
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)&nbsp;
+
 # CS50 Coursework Repository
 
 ## Overview
